@@ -1,0 +1,211 @@
+/* Reset básico */
+body {
+    font-family: Arial, sans-serif;
+    margin: 10px 50px 10px 50px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #4b0082; /* Roxo escuro */
+    color: white;
+    padding: 10px 5px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.subtitle {
+    color:#a3a2a2;
+}
+
+/* Navegação principal */
+nav {
+    background-color: #0aff7c; /* Verde vibrante */
+    position: relative;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+/* Botão do menu hambúrguer */
+nav .menu-toggle {
+    display: none; /* Inicialmente escondido no desktop */
+    font-size: 1.5em;
+    background-color: #0aff7c; /* Fundo verde */
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 10px; /* Alinhado à esquerda */
+    transform: translateY(-50%);
+    z-index: 101;
+    color: #000;
+    padding: 10px;
+    border-radius: 5px; /* Bordas arredondadas, se preferir */
+}
+
+/* Exibição do "X" quando o menu está aberto */
+nav .menu-toggle.open {
+    color: #4b0082; /* Altera a cor ao abrir */
+}
+
+/* Ícone do hambúrguer */
+nav .hamburger-icon {
+    font-size: 1em;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Alterando o ícone para um "X" quando o menu estiver aberto */
+nav .menu-toggle.open .hamburger-icon {
+    transform: rotate(45deg); /* Rotaciona o hambúrguer para formar um X */
+    opacity: 0; /* Torna o ícone invisível */
+}
+
+/* Estilo do "X" */
+nav .menu-toggle.open::after {
+    content: '\00d7'; /* Isso vai gerar o X */
+    font-size: 1em;
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    right: 10px; /* Alinha à direita */
+    transform: translateY(-50%); /* Ajusta o X para ficar centralizado */
+    color: #000;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+/* Lista de menus */
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+    flex-wrap: wrap;
+    transition: max-height 0.3s ease-in-out;
+}
+
+nav li {
+    position: relative;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+nav li:hover {
+    background-color: #00A650; /* Verde escuro */
+    color: #000;
+}
+
+/* Submenus */
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 0;
+    list-style: none;
+    z-index: 1000;
+    width: max-content;
+}
+
+nav li:hover > ul {
+    display: block;
+}
+
+nav ul ul li {
+    padding: 10px 20px;
+    white-space: nowrap;
+    font-size: 0.9em;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+    text-align: left;
+}
+
+nav ul ul li:hover {
+    background-color: #99ED8D; /* Verde claro */
+}
+
+/* Submenus de segundo nível */
+nav ul ul ul {
+    top: 0;
+    left: 100%;
+    background-color: #ffffff;
+    border-left: 1px solid #ddd;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    /* Botão hambúrguer visível */
+    nav .menu-toggle {
+        display: block; /* Torna visível no mobile */
+        font-size: 1em;
+        left: 10px; /* Alinha à esquerda */
+        background-color: #0aff7c; /* Fundo verde */
+        padding: 10px;
+    }
+
+    /* Menu inicial escondido */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 0;
+        background-color: #0aff7c;
+        overflow: hidden;
+        max-height: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 999; /* Garante que o menu fique acima de outros itens */
+    }
+
+    /* Menu visível quando ativo */
+    nav ul.show {
+        display: flex;
+        max-height: 500px; /* Ajuste conforme necessário */
+    }
+
+    nav li {
+        padding: 15px;
+        text-align: left;
+        width: 100%;
+    }
+
+    /* Hover ativo para telas pequenas */
+    nav li:hover {
+        background-color: #00A650;
+        color: #000;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 100%; /* Garante que a imagem não ultrapasse o tamanho do contêiner */
+    }
+
+    h2 {
+        font-size: 1rem; /* Menor tamanho de fonte em telas pequenas */
+    }
+
+    p {
+        font-size: 0.9rem; /* Ajusta o tamanho do texto em telas pequenas */
+    }
+}

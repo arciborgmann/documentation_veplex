@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Efesus Documentation/styles.css">
+    <title>Documentação do Sistema</title>
+</head>
+<body>
+    <header>
+        Documentação do Sistema - Efesus
+    </header>
+    <nav>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            <span class="hamburger-icon">&#9776;</span> <!-- Ícone de hamburger -->
+        </button>
+        <ul>
+            <li>
+                Cadastro
+                <ul>
+                    <li>
+                        Geral
+                        <ul>
+                            <li data-content="cd_ger_acrescimo">Acréscimo</li>
+                            <li data-content="cd_ger_desconto">Desconto</li>
+                            <li data-content="cd_ger_motivo_ocorrencia">Motivo de Ocorrência</li>
+                            <li data-content="cd_ger_motivo_visita">Motivo de Visita</li>
+                            <li data-content="cd_ger_situacao_pedido">Situação do Pedido</li>
+                            <li data-content="cd_ger_tipo_ocorrencia">Tipo de Ocorrência</li>
+                            <li data-content="cd_ger_tipo_pedido">Tipo de Pedido</li>
+                        </ul>                        
+                    </li>
+                    <li>
+                        Empresa
+                        <ul>
+                            <li data-content="cd_emp_empresa">Empresa</li>
+                            <li data-content="cd_emp_filial">Filial</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Cliente
+                        <ul>
+                            <li data-content="cli_atividade">Atividade</li>
+                            <li data-content="cli_cliente">Cliente</li>
+                            <li data-content="cli_rede">Rede</li>
+                            <li data-content="cli_secao_loja">Seção de Loja</li>
+                            <li data-content="cli_situacao_cliente">Situação do Cliente</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Produto
+                        <ul>
+                            <li data-content="prod_categoria">Categoria</li>
+                            <li data-content="prod_fabricante">Fabricante</li>
+                            <li data-content="prod_grupo_produto">Grupo de Produto</li>
+                            <li data-content="prod_marca">Marca</li>
+                            <li data-content="prod_produto">Produto</li>
+                            <li data-content="prod_tipo_produto">Tipo de Produto</li>
+                            <li data-content="prod_unidade_medida">Unidade de Medida</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Combo
+                        <ul>
+                            <li data-content="cmb_categoria_combo">Categoria Combo</li>
+                            <li data-content="cmb_combo">Combo</li>
+                            <li data-content="cmb_grupo_ativacao">Grupo Ativação</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Merchandising
+                        <ul>
+                            <li data-content="merc_categoria_foto">Categoria de Foto</li>
+                            <li data-content="merc_metrica">Métrica</li>
+                            <li data-content="merc_passo_visita">Passo da Visita</li>
+                            <li data-content="merc_planograma">Planograma</li>
+                            <li data-content="merc_tipo_exposicao_produto">Tipo Exposição Produto</li>
+                        </ul>                        
+                    </li>
+                    <li>
+                        Financeiro
+                        <ul>
+                            <li data-content="fin_condicao_pagamento">Condição de Pagamento</li>
+                            <li data-content="fin_tipo_pagamento">Tipo de Pagamento</li>
+                        </ul>
+                        
+                    </li>
+                    <li>
+                        Fiscal
+                        <ul>
+                            <li data-content="fis_csta">CSTA</li>
+                            <li data-content="fis_cstb">CSTB</li>
+                            <li data-content="fis_classificacao_fiscal">Classificação Fiscal</li>
+                            <li data-content="fis_icms_uf">ICMS - UF</li>
+                            <li data-content="fis_operacao_fiscal">Operação Fiscal</li>
+                        </ul>                        
+                    </li>
+                    <li>
+                        Pesquisa
+                        <ul>
+                            <li data-content="pesq_opcao_resposta">Opção de Resposta</li>
+                            <li data-content="pesq_pesquisa">Pesquisa</li>
+                            <li data-content="pesq_pesquisa_respostas">Pesquisa Respostas</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Veículo
+                        <ul>
+                            <li data-content="veic_tipo_veiculo">Tipo de Veículo</li>
+                        </ul>                        
+                    </li>
+                </ul>
+            <li>
+                Comercial
+                <ul>
+                    <li data-content="com_credito_liberacao">Crédito de Liberação</li>
+                    <li data-content="com_lista_preco">Lista de Preço</li>
+                    <li data-content="com_lista_transmissao">Lista de Transmissão</li>
+                    <li data-content="com_mix_ideal">Mix Ideal</li>
+                    <li data-content="com_negociacao">Negociação</li>
+                    <li data-content="com_regiao_venda">Região de Venda</li>
+                    <li data-content="com_representante_comercial">Representante Comercial</li>
+                    <li data-content="com_simulador_negociacao">Simulador Negociação</li>
+                    <li>
+                        Roteirizador
+                        <ul>
+                            <li data-content="com_rot_analise_coordenadas">Análise de Coordenadas</li>
+                            <li data-content="com_rot_definir_rota">Definir Rota</li>
+                            <li data-content="com_rot_exportar_rota">Exportar Rota</li>
+                            <li data-content="com_rot_gerar_base">Gerar Base</li>
+                            <li data-content="com_rot_mapa_analise">Mapa de Análise</li>
+                        </ul>                        
+                    </li>
+                    <li>
+                        Merchandising
+                        <ul>
+                            <li data-content="com_merc_book_de_fotos">Book de Fotos</li>
+                            <li data-content="com_merc_iniciativa">Iniciativa</li>
+                            <li data-content="com_merc_listagem_de_fotos">Listagem de Fotos</li>
+                            <li data-content="com_merc_ponto_extra">Ponto Extra</li>
+                            <li data-content="com_merc_validacao_ponto_extra">Validação Ponto Extra</li>
+                            <li data-content="com_merc_validacao_de_fotos">Validação de Fotos</li>
+                        </ul>
+                        
+                    </li>
+                </ul>
+                
+            </li>
+            <li>
+                Compras
+                <ul>
+                    <li data-content="fornecedor">Fornecedor</li>
+                    <li>
+                        Preço Venda
+                        <ul>
+                            <li data-content="comp_aprovacao_preco_venda">Aprovação Preço Venda</li>
+                            <li data-content="comp_geracao_preco_venda">Geração Preço Venda</li>
+                        </ul>
+                        
+                    </li>
+                </ul>
+                
+            </li>
+            <li>
+                Faturamento
+                <ul>
+                    <li data-content="pedido_saida">Pedido de Saída</li>
+                </ul>
+            </li>
+            <li>
+                Gerencial
+                <ul>
+                    <li data-content="merchandising">Merchandising</li>
+                    <li data-content="pedflex">Pedflex</li>
+                    <li data-content="visitas_ponto">Visitas X Ponto</li>
+                </ul>
+            </li>
+            <li>
+                Logística
+                <ul>
+                    <li data-content="cargas_saida">Cargas de Saída</li>
+                    <li data-content="carregamento">Carregamento</li>
+                    <li data-content="motorista">Motorista</li>
+                    <li data-content="rota">Rota</li>
+                    <li data-content="transportadora">Transportadora</li>
+                    <li data-content="veiculo">Veículo</li>
+                </ul>
+                
+            </li>
+            <li>
+                Processo
+                <ul>
+                    <li>
+                        Atualização
+                        <ul> 
+                            <li data-content="proc_atual_comercial">Comercial</li>
+                        </ul>        
+                    </li>
+                    <li>
+                        Importação
+                        <ul>
+                            <li data-content="proc_import_importar_impostos">Importar Impostos</li>
+                            <li data-content="proc_import_importar_plano_visita">Importar Plano Visita</li>
+                            <li data-content="proc_import_importacao_produto_imagem">Importação Produto Imagem</li>
+                        </ul>
+                        
+                    </li>
+                    <li>
+                        Exportação
+                        <ul> 
+                            <li data-content="proc_export_ponto">Ponto</li>
+                        </ul>        
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Recursos Humanos
+                <ul>
+                    <li data-content="cargos">Cargos</li>
+                    <li data-content="funcionario">Funcionário</li>
+                </ul>
+            </li>
+            <li>
+                Relatórios
+                <ul>
+                    <li>
+                        Comercial
+                        <ul>
+                            <li data-content="rel_com_roteirizacao">Roteirização</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Merchandising
+                        <ul>
+                            <li data-content="rel_analise_visita_promotor">Análise Visita Promotor</li>
+                            <li data-content="rel_estoque_critico">Estoque Crítico</li>
+                            <li data-content="rel_mix_ideal">Mix Ideal</li>
+                            <li data-content="rel_oportunidades">Oportunidades</li>
+                            <li data-content="rel_pontos_extras">Pontos Extras</li>
+                            <li data-content="rel_reabastecimento_de_visitas">Reabastecimento de Visitas</li>
+                            <li data-content="rel_relatorio_disciplina_operacional">Relatório Disciplina Operacional</li>
+                            <li data-content="rel_sumario_executivo">Sumário Executivo</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Pedflex
+                        <ul>
+                            <li data-content="rel_acessos_do_vendedor">Acessos do Vendedor</li>
+                            <li data-content="rel_disparos_pedflex">Disparos PedFlex</li>
+                            <li data-content="rel_historico_envios">Histórico Envios</li>
+                            <li data-content="rel_venda_pedflex">Venda Pedflex</li>
+                            <li data-content="rel_venda_usuario">Venda Usuário</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Região Venda
+                        <ul>
+                            <li data-content="rel_hierarquia">Hierarquia</li>
+                            <li data-content="rel_plano_de_visitas">Plano de Visitas</li>
+                            <li data-content="rel_visitas_realizadas">Visitas realizadas</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Recursos Humanos
+                        <ul>
+                            <li data-content="rel_registro_de_ponto">Registro de Ponto</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Produto
+                        <ul>
+                            <li data-content="rel_estoque">Estoque</li>
+                            <li data-content="rel_positivacao_sku">Positivação SKU</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Cliente
+                        <ul>
+                            <li data-content="rel_cliente">Cliente</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Segurança
+                <ul>
+                    <li data-content="chaves_aplicativo">Chaves Aplicativo</li>
+                    <li>
+                        Parâmetro Geral
+                        <ul>
+                            <li data-content="seg_parametro_geral">Parâmetro Geral</li>
+                            <li data-content="seg_parametro_geral_empresa">Parâmetro Geral - Empresa</li>
+                            <li data-content="seg_parametro_geral_filial">Parâmetro Geral - Filial</li>
+                            <li data-content="seg_parametro_geral_pedido_venda">Parâmetro Geral - Pedido de Venda</li>
+                        </ul>
+                        
+                    </li>
+                    <li>
+                        Permissão
+                        <ul>
+                            <li data-content="seg_base_dados">Base de Dados</li>
+                            <li data-content="seg_grupo_permissoes">Grupo de permissões</li>
+                            <li data-content="seg_integracao">Integração</li>
+                            <li data-content="seg_pastas">Pastas</li>
+                            <li data-content="seg_permissoes">Permissões</li>
+                            <li data-content="seg_usuarios">Usuários</li>
+                        </ul>                        
+                    </li>
+                </ul>
+            </li>
+            <li data-content="financeiro">Financeiro</li>
+            <li data-content="acesso">Acesso</li>
+        </ul>
+    </nav>
+    <main id="content">
+        <!-- Conteúdo será carregado aqui -->
+    </main>
+    <script src="/Efesus Documentation/scripts.js"></script>
+</body>
+</html>

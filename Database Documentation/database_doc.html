@@ -1,0 +1,2566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Documentation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <img src="/Database Documentation/img/logo-veplex.png" alt="Veplex" class="company-logo">
+        <h1 class="header-title">Database Documentation</h1>
+    </header>
+
+    <!-- Cards de informações -->
+    <div class="info-cards-container">
+        <div class="info-card">
+            <h3>Tabelas Encontradas</h3>
+            <p id="tabelas-count">0</p> <!-- Aqui será exibido o número de tabelas -->
+        </div>
+        <div class="info-card">
+            <h3>Campos Encontrados</h3>
+            <p id="campos-count">0</p> <!-- Aqui será exibido o número de campos -->
+        </div>
+    </div> 
+
+    <div class="container">
+        <div>
+            <input type="text" id="search" placeholder="Busque por tabela, campo ou descrição..." oninput="filterTables()">
+        </div>
+        <div class="checkbox-container">
+            <div class="checkbox-item">
+                <input type="checkbox" id="tabelas">
+                <label for="tabelas">Tabelas</label>
+            </div>
+            <div class="checkbox-item">
+                <input type="checkbox" id="campos">
+                <label for="campos">Campos</label>
+            </div>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-cliente')">
+            <h2>Cliente</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-cliente" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados do cliente</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_pessoa</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador único do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_atividade</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Código da atividade do cliente.</td>
+                    </tr>
+                    <tr>
+                        <td>id_situacao</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Código que representa a situação do cliente.</td>
+                    </tr>
+                    <tr>
+                        <td>id_nf_devolucao</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Código da nota fiscal de devolução associada ao cliente.</td>
+                    </tr>
+                    <tr>
+                        <td>id_consumidor_final</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indicador se o cliente é um consumidor final.</td>
+                    </tr>
+                    <tr>
+                        <td>id_ref</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Referência do cliente.</td>
+                    </tr>
+                    <tr>
+                        <td>vl_limite_financeiro</td>
+                        <td></td>
+                        <td>NUMERIC(15,2)</td>
+                        <td>Limite financeiro do cliente.</td>
+                    </tr>
+                    <tr>
+                        <td>vl_pedido_minimo</td>
+                        <td></td>
+                        <td>NUMERIC(15,2)</td>
+                        <td>Valor mínimo de pedido do cliente.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_tipo_pagamento_principal</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Código do tipo de pagamento principal do cliente.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_filial</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Código da filial do cliente.</td>
+                    </tr>
+                    <tr>
+                        <td>create_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>id_preco_nota</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Código do preço da nota fiscal.</td>
+                    </tr>
+                    <tr>
+                        <td>id_ean</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Código EAN associado ao cliente.</td>
+                    </tr>
+                    <tr>
+                        <td>nr_dias_prazo_entrega</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Quantidade de dias para prazo de entrega.</td>
+                    </tr>
+                    <tr>
+                        <td>id_valida_limite_credito</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Código que indica se o limite de crédito é válido.</td>
+                    </tr>
+                    <tr>
+                        <td>id_bloqueia_limite_credito</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Código que indica se o limite de crédito está bloqueado.</td>
+                    </tr>
+                    <tr>
+                        <td>id_bloqueia_brinde_notificacao</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Código que indica se a notificação de brinde está bloqueada.</td>
+                    </tr>
+                    <tr>
+                        <td>ds_faixa_colgate</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Faixa de clientes relacionada à Colgate.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-atividade')">
+            <h2>Atividade</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-atividade" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de atividade</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_atividade</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador único da atividade.</td>
+                    </tr>
+                    <tr>
+                        <td>nm_atividade</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Nome da atividade.</td>
+                    </tr>
+                    <tr>
+                        <td>create_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_referencia_externa</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Referência externa associada à atividade.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-pessoa')">
+            <h2>Pessoa</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-pessoa" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados da pessoa</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_pessoa</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador único da pessoa.</td>
+                    </tr>
+                    <tr>
+                        <td>nm_pessoa</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Nome da pessoa.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_cidade</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Código da cidade associada à pessoa.</td>
+                    </tr>
+                    <tr>
+                        <td>create_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_referencia_externa</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Referência externa associada à pessoa.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tabela Pessoa Jurídica -->
+        <div class="table-header" onclick="toggleContent('tabela-pessoa-juridica')">
+            <h2>Pessoa Jurídica</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-pessoa-juridica" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Pessoa Jurídica</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_pessoa_juridica</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador único da pessoa jurídica.</td>
+                    </tr>
+                    <tr>
+                        <td>nm_razao_social</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Razão social da pessoa jurídica.</td>
+                    </tr>
+                    <tr>
+                        <td>nm_nome_fantasia</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Nome fantasia da pessoa jurídica.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_cnpj</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>CNPJ da pessoa jurídica.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_ie</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Inscrição estadual da pessoa jurídica.</td>
+                    </tr>
+                    <tr>
+                        <td>create_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Tabela Pessoa Física -->
+        <div class="table-header" onclick="toggleContent('tabela-pessoa-fisica')">
+            <h2>Pessoa Física</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-pessoa-fisica" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Pessoa Física</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_pessoa_fisica</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador único da pessoa física.</td>
+                    </tr>
+                    <tr>
+                        <td>nm_pessoa_fisica</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Nome da pessoa física.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_cpf</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>CPF da pessoa física.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_rg</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>RG da pessoa física.</td>
+                    </tr>
+                    <tr>
+                        <td>create_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-endereco')">
+            <h2>Endereço</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-endereco" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Endereço</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_endereco</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador único do endereço.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador da pessoa associada ao endereço.</td>
+                    </tr>
+                    <tr>
+                        <td>id_tipo_endereco</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Tipo de endereço (residencial, comercial, etc.).</td>
+                    </tr>
+                    <tr>
+                        <td>cd_cidade</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Código da cidade.</td>
+                    </tr>
+                    <tr>
+                        <td>nr_cep</td>
+                        <td></td>
+                        <td>CHARACTER VARYING(8)</td>
+                        <td>CEP do endereço.</td>
+                    </tr>
+                    <tr>
+                        <td>nm_logradouro</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Nome do logradouro (rua, avenida, etc.).</td>
+                    </tr>
+                    <tr>
+                        <td>nr_endereco</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Número do endereço.</td>
+                    </tr>
+                    <tr>
+                        <td>nm_bairro</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Nome do bairro.</td>
+                    </tr>
+                    <tr>
+                        <td>ds_complemento</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Complemento do endereço (bloco, apartamento, etc.).</td>
+                    </tr>
+                    <tr>
+                        <td>nr_latitude</td>
+                        <td></td>
+                        <td>NUMERIC(8,6)</td>
+                        <td>Latitude do endereço.</td>
+                    </tr>
+                    <tr>
+                        <td>nr_longitude</td>
+                        <td></td>
+                        <td>NUMERIC(8,6)</td>
+                        <td>Longitude do endereço.</td>
+                    </tr>
+                    <tr>
+                        <td>id_coordenada_correta</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Indicação se a coordenada está correta.</td>
+                    </tr>
+                    <tr>
+                        <td>ds_ponto_referencia</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Descrição do ponto de referência.</td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>id_coordenada_analisada</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indicação se a coordenada foi analisada.</td>
+                    </tr>
+                    <tr>
+                        <td>dt_coordenada_analisada</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Data de análise da coordenada.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_usuario_analise</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Usuário responsável pela análise da coordenada.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-telefone')">
+            <h2>Telefone</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-telefone" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Telefone</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_telefone</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador único do telefone.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador da pessoa associada ao telefone.</td>
+                    </tr>
+                    <tr>
+                        <td>nr_telefone</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Número do telefone.</td>
+                    </tr>
+                    <tr>
+                        <td>id_principal</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indicação se o telefone é o principal.</td>
+                    </tr>
+                    <tr>
+                        <td>id_whatsapp</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indicação se o telefone é WhatsApp.</td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-email')">
+            <h2>Email</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-email" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Email</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_email</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador único do email.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador da pessoa associada ao email.</td>
+                    </tr>
+                    <tr>
+                        <td>ds_email</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Endereço de email.</td>
+                    </tr>
+                    <tr>
+                        <td>id_principal</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indicação se o email é o principal.</td>
+                    </tr>
+                    <tr>
+                        <td>id_nfe</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indicação se o email é utilizado para NFE.</td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-regiao-venda-cliente')">
+            <h2>Região Venda Cliente</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-regiao-venda-cliente" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Região Venda Cliente</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_regiao_venda_cliente</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador único da região de venda do cliente.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_regiao_venda</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador da região de venda.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Identificador da pessoa associada.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_grupo_produto</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador do grupo de produtos.</td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_fabricante</td>
+                        <td></td>
+                        <td>BIGINT</td>
+                        <td>Identificador do fabricante.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_marca</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador da marca.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_produto</td>
+                        <td></td>
+                        <td>BIGINT</td>
+                        <td>Identificador do produto.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_referencia_externa_carteira</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Referência externa para a carteira.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-regiao-venda-pessoa')">
+            <h2>Região Venda Pessoa</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-regiao-venda-pessoa" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Região Venda Pessoa</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_regiao_venda_pessoa</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador único da região de venda da pessoa.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_regiao_venda</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador da região de venda.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Identificador da pessoa associada.</td>
+                    </tr>
+                    <tr>
+                        <td>dt_inicio</td>
+                        <td></td>
+                        <td>DATE</td>
+                        <td>Data de início da venda.</td>
+                    </tr>
+                    <tr>
+                        <td>dt_fim</td>
+                        <td></td>
+                        <td>DATE</td>
+                        <td>Data de fim da venda.</td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-regiao-venda')">
+            <h2>Região Venda</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-regiao-venda" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Região Venda</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_regiao_venda</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador único da região de venda.</td>
+                    </tr>
+                    <tr>
+                        <td>nm_regiao_venda</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Nome da região de venda.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_regiao_venda_superior</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador da região de venda superior.</td>
+                    </tr>
+                    <tr>
+                        <td>vl_pedido_minimo</td>
+                        <td></td>
+                        <td>NUMERIC(15,2)</td>
+                        <td>Valor mínimo do pedido para a região.</td>
+                    </tr>
+                    <tr>
+                        <td>id_segue_roteiro</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indica se a região segue o roteiro.</td>
+                    </tr>
+                    <tr>
+                        <td>id_visita_fora_planejamento</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indica se a visita é fora do planejamento.</td>
+                    </tr>
+                    <tr>
+                        <td>id_compara_coordenada_cliente</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indica se compara a coordenada do cliente.</td>
+                    </tr>
+                    <tr>
+                        <td>qt_distancia_raio</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Distância do raio da região.</td>
+                    </tr>
+                    <tr>
+                        <td>id_tipo_regiao</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Identificador do tipo de região.</td>
+                    </tr>
+                    <tr>
+                        <td>dt_ultima_sincronizacao</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última sincronização da região.</td>
+                    </tr>
+                    <tr>
+                        <td>pr_bateria</td>
+                        <td></td>
+                        <td>NUMERIC(15,2)</td>
+                        <td>Valor da bateria.</td>
+                    </tr>
+                    <tr>
+                        <td>id_ativo_pedflex</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indica se o ativo está no Pedflex.</td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>id_venda</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Identificador da venda associada.</td>
+                    </tr>
+                    <tr>
+                        <td>qt_minutos_localizacao_background</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Quantidade de minutos para localização em background.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_referencia_externa</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Referência externa associada à região.</td>
+                    </tr>
+                    <tr>
+                        <td>id_compara_coordenada_cliente_checkout</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indica se compara a coordenada do cliente no checkout.</td>
+                    </tr>
+                    <tr>
+                        <td>qt_foto_perfeita_obrigatoria</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Quantidade de fotos perfeitas obrigatórias.</td>
+                    </tr>
+                    <tr>
+                        <td>id_ativo_upvendas</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indica se o ativo está ativo para Upvendas.</td>
+                    </tr>
+                    <tr>
+                        <td>id_deslogar</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indica se o deslogamento está habilitado.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_referencia_externa_erp</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Referência externa ERP associada.</td>
+                    </tr>
+                    <tr>
+                        <td>id_gondolas</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Identificador de gôndolas associadas.</td>
+                    </tr>
+                    <tr>
+                        <td>id_sincronizacao_automatica</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indica se a sincronização é automática.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>        
+
+        <div class="table-header" onclick="toggleContent('tabela-regiao-venda-filial')">
+            <h2>Região Venda Filial</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-regiao-venda-filial" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Região Venda Filial</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_regiao_venda</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador da região de venda.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_filial</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador da filial associada à região de venda.</td>
+                    </tr>
+                    <tr>
+                        <td>id_principal</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indica se é a filial principal (1) ou não (0).</td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-filial')">
+            <h2>Filial</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-filial" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Filial</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_pessoa_filial</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador único da filial.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_empresa</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador da empresa associada à filial.</td>
+                    </tr>
+                    <tr>
+                        <td>id_ativo</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indica se a filial está ativa (1) ou não (0).</td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_referencia_externa</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Referência externa associada à filial.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_referencia_externa_reduzido</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Referência externa reduzida associada à filial.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_base_dados</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador da base de dados associada.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-empresa')">
+            <h2>Empresa</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-empresa" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Empresa</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_pessoa_empresa</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador único da empresa.</td>
+                    </tr>
+                    <tr>
+                        <td>id_ativo</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indica se a empresa está ativa (1) ou não (0).</td>
+                    </tr>
+                    <tr>
+                        <td>cd_grupo_economico</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador do grupo econômico da empresa.</td>
+                    </tr>
+                    <tr>
+                        <td>nm_base_dados</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Nome da base de dados associada à empresa.</td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-fabricante')">
+            <h2>Fabricante</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-fabricante" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Fabricante</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_fabricante</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador único do fabricante.</td>
+                    </tr>
+                    <tr>
+                        <td>nm_fabricante</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Nome do fabricante.</td>
+                    </tr>
+                    <tr>
+                        <td>ds_imagem</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Imagem associada ao fabricante.</td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_referencia_externa</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Referência externa associada ao fabricante.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_marca</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador da marca associada ao fabricante.</td>
+                    </tr>
+                    <tr>
+                        <td>id_negociacao_especial</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indica se há negociação especial (1) ou não (0).</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-restricao-venda')">
+            <h2>Restrição Venda</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-restricao-venda" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Restrição de Venda</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_restricao_venda</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador único da restrição de venda.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_produto</td>
+                        <td></td>
+                        <td>BIGINT</td>
+                        <td>Identificador do produto relacionado à restrição.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_grupo_produto</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador do grupo de produtos relacionado.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_marca</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador da marca associada à restrição de venda.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_regiao_venda</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador da região de venda associada.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_atividade</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador da atividade associada à restrição de venda.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_cliente</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador do cliente associado à restrição.</td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_referencia_externa</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Referência externa associada à restrição de venda.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-produto')">
+            <h2>Produto</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-produto" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados do Produto</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_produto</td>
+                        <td class="pkey">PK</td>
+                        <td>BIGINT</td>
+                        <td>Identificador único do produto.</td>
+                    </tr>
+                    <tr>
+                        <td>nm_produto</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Nome do produto.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_tipo_produto</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador do tipo do produto.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_classificacao_fiscal</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Classificação fiscal do produto.</td>
+                    </tr>
+                    <tr>
+                        <td>id_ativo</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Indica se o produto está ativo (1) ou não (0).</td>
+                    </tr>
+                    <tr>
+                        <td>cd_grupo_produto</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador do grupo de produto ao qual pertence.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_unidade</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador da unidade de medida do produto.</td>
+                    </tr>
+                    <tr>
+                        <td>ds_produto</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Descrição do produto.</td>
+                    </tr>
+                    <tr>
+                        <td>nr_fcl</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Número FCL (Full Container Load) relacionado ao produto.</td>
+                    </tr>
+                    <tr>
+                        <td>nr_cest</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Número do CEST (Código Especificador da Substituição Tributária). </td>
+                    </tr>
+                    <tr>
+                        <td>ds_codigo_fornecer</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Código utilizado para fornecer o produto.</td>
+                    </tr>
+                    <tr>
+                        <td>id_tributacao_pis_cofins</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Identificador da tributação de PIS/COFINS do produto.</td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_secao_loja</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador da seção da loja onde o produto está localizado.</td>
+                    </tr>
+                    <tr>
+                        <td>qt_unitaria_venda</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Quantidade mínima para venda do produto.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_fabricante</td>
+                        <td></td>
+                        <td>BIGINT</td>
+                        <td>Identificador do fabricante do produto.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_referencia_externa</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Referência externa associada ao produto.</td>
+                    </tr>
+                    <tr>
+                        <td>ds_ecommerce</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Descrição do produto no e-commerce.</td>
+                    </tr>
+                    <tr>
+                        <td>pr_acrescimo_maximo</td>
+                        <td></td>
+                        <td>NUMERIC(15,2)</td>
+                        <td>Percentual máximo de acréscimo permitido no preço do produto.</td>
+                    </tr>
+                    <tr>
+                        <td>pr_desconto_maximo</td>
+                        <td></td>
+                        <td>NUMERIC(15,2)</td>
+                        <td>Percentual máximo de desconto permitido no preço do produto.</td>
+                    </tr>
+                    <tr>
+                        <td>id_ignora_min_max_obrigatorio</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indica se deve ser ignorada a obrigatoriedade de valores mínimos e máximos (1) ou não (0).</td>
+                    </tr>
+                    <tr>
+                        <td>ds_codigo_externo</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Código externo relacionado ao produto.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_categoria_produto</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td>Identificador da categoria do produto.</td>
+                    </tr>
+                    <tr>
+                        <td>ds_codigo_legado</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Código legado associado ao produto.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-lista-preco')">
+            <h2>Lista_Preco</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-lista-preco" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados da Lista de Preço</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_lista_preco</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td>Identificador único da lista de preço.</td>
+                    </tr>
+                    <tr>
+                        <td>nm_lista_preco</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Nome da lista de preço.</td>
+                    </tr>
+                    <tr>
+                        <td>dt_inicio</td>
+                        <td></td>
+                        <td>DATE</td>
+                        <td>Data de início da lista de preço.</td>
+                    </tr>
+                    <tr>
+                        <td>dt_termino</td>
+                        <td></td>
+                        <td>DATE</td>
+                        <td>Data de término da lista de preço.</td>
+                    </tr>
+                    <tr>
+                        <td>id_calcula_indexador</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indica se a lista de preço calcula indexador (1) ou não (0).</td>
+                    </tr>
+                    <tr>
+                        <td>id_calcula_condicao_pagamento</td>
+                        <td></td>
+                        <td>SMALLINT</td>
+                        <td>Indica se a lista de preço calcula condição de pagamento (1) ou não (0).</td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro.</td>
+                    </tr>
+                    <tr>
+                        <td>cd_referencia_externa</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td>Referência externa associada à lista de preço.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-acordo-comercial')">
+            <h2>Acordo_Comercial</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-acordo-comercial" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Acordo Comercial</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey">PK</th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_acordo_comercial</td>
+                        <td class="pkey">X</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_inicio</td>
+                        <td class="pkey"></td>
+                        <td>DATE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_termino</td>
+                        <td class="pkey"></td>
+                        <td>DATE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_cliente</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_usuario</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_geracao</td>
+                        <td class="pkey"></td>
+                        <td>DATE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>vl_acordo</td>
+                        <td class="pkey"></td>
+                        <td>NUMERIC(15,2)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_observacao</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_acordo</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_base</td>
+                        <td class="pkey"></td>
+                        <td>DATE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_documento_firmar_digital</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_status_assinatura</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_proposta_acordo_comercial</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</TIME></TIME></td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-acordo-comercial-anexo')">
+            <h2>Acordo_comercial_anexo</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-acordo-comercial-anexo" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Acordo Comercial Anexo</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey">PK</th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_acordo_comercial_anexo</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_acordo_comercial</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_fornecedor_ressarcimento</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_usuario</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_anexo</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_caminho_anexo</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_tipo</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-acordo-comercial-contrato')">
+            <h2>Acordo_comercial_contrato</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-acordo-comercial-contrato" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Acordo Comercial Contrato</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey">PK</th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_acordo_comercial_contrato</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_acordo_comercial</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_usuario</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_geracao</td>
+                        <td class="pkey"></td>
+                        <td>DATE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_acordo_contrato</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_caminho_contrato_assinado</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-header" onclick="toggleContent('tabela-acordo-comercial-parametros')">
+            <h2>Acordo_comercial_parametros</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-acordo-comercial-parametros" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Acordo Comercial Parâmetros</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_acordo_comercial_parametros</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_acordo_comercial</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_fornecedor_ressarcimento</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>vl_pagamento</td>
+                        <td class="pkey"></td>
+                        <td>NUMERIC(15,2)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>pr_reembolso_fornecedor</td>
+                        <td class="pkey"></td>
+                        <td>NUMERIC(15,2)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_regiao_venda</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_acao</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-header" onclick="toggleContent('tabela-acordo-comercial-parametros')">
+            <h2>Acordo_comercial_parametros</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-acordo-comercial-parametros" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Acordo Comercial Parâmetros</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_acordo_comercial_parametros</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_acordo_comercial</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_fornecedor_ressarcimento</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>vl_pagamento</td>
+                        <td class="pkey"></td>
+                        <td>NUMERIC(15,2)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>pr_reembolso_fornecedor</td>
+                        <td class="pkey"></td>
+                        <td>NUMERIC(15,2)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_regiao_venda</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_acao</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-acordo-comercial-signatario')">
+            <h2>Acordo_comercial_signatario</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-acordo-comercial-signatario" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Acordo Comercial Signatário</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_acordo_comercial</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_signatario</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_tipo</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_ordem</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_envio</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_visualizacao</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_assinatura</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_latitude</td>
+                        <td class="pkey"></td>
+                        <td>NUMERIC(8,6)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_longitude</td>
+                        <td class="pkey"></td>
+                        <td>NUMERIC(8,6)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_pessoa_assinatura</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_cpf_pessoa_assinatura</td>
+                        <td class="pkey"></td>
+                        <td>DATE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_nascimento_pessoa_assinatura</td>
+                        <td class="pkey"></td>
+                        <td>DATE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_ip_assinatura</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_navegador_assinatura</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-acrescimo')">
+            <h2>Acrescimo</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-acrescimo" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Acréscimo</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_acrescimo</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_acrescimo</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_calculo</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_ordem</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>      
+
+        <div class="table-header" onclick="toggleContent('tabela-agencia')">
+            <h2>Agencia</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-agencia" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Agência</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_agencia</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_banco</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_cidade</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_agencia</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_agencia</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_digito</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-armazem')">
+            <h2>Armazem</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-armazem" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Armazém</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_armazem</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_filial</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_armazem</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_situacao</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_ativo</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_tipo</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-armazem-estoque')">
+            <h2>Armazem_estoque</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-armazem-estoque" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Armazém Estoque</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_armazem</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_produto</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_cidade</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_agencia</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_agencia</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_digito</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-atividade-passo-visita')">
+            <h2>atividade_passo_visita</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-atividade-passo-visita" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Atividade Passo Visita</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_atividade</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_atividade</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                    <tr>
+                        <td>cd_referencia_externa</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-auditoria-log')">
+            <h2>auditoria_log</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-auditoria-log" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Auditoria Log</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_auditoria_log</td>
+                        <td class="pkey">PK</td>
+                        <td>BIGINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_auditoria_log</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_base</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_caminho</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-backup-negociacao-cliente')">
+            <h2>backup_negociacao_cliente</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-backup-negociacao-cliente" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Backup Negociação Cliente</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_negociacao</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_cliente</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                    <tr>
+                        <td>id_excluir</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-banco')">
+            <h2>banco</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-banco" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Banco</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_banco</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_banco</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_banco</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-base-dados')">
+            <h2>base_dados</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-base-dados" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Base de Dados</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_base_dados</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_base_dados</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_conexao</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_imagem</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+       
+
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
