@@ -281,7 +281,7 @@
 
         <!-- Tabela Pessoa Jurídica -->
         <div class="table-header" onclick="toggleContent('tabela-pessoa-juridica')">
-            <h2>Pessoa Jurídica</h2>
+            <h2>Pessoa_Juridica</h2>
             <span>▼</span>
         </div>
         <div id="tabela-pessoa-juridica" class="table-content" data-type="tabela">
@@ -344,7 +344,7 @@
 
         <!-- Tabela Pessoa Física -->
         <div class="table-header" onclick="toggleContent('tabela-pessoa-fisica')">
-            <h2>Pessoa Física</h2>
+            <h2>Pessoa_Fisica</h2>
             <span>▼</span>
         </div>
         <div id="tabela-pessoa-fisica" class="table-content" data-type="tabela">
@@ -400,7 +400,7 @@
         </div>
 
         <div class="table-header" onclick="toggleContent('tabela-endereco')">
-            <h2>Endereço</h2>
+            <h2>Endereco</h2>
             <span>▼</span>
         </div>
         <div id="tabela-endereco" class="table-content" data-type="tabela">
@@ -652,7 +652,7 @@
         </div>
 
         <div class="table-header" onclick="toggleContent('tabela-regiao-venda-cliente')">
-            <h2>Região Venda Cliente</h2>
+            <h2>Regiao_Venda_Cliente</h2>
             <span>▼</span>
         </div>
         <div id="tabela-regiao-venda-cliente" class="table-content" data-type="tabela">
@@ -732,7 +732,7 @@
         </div>
         
         <div class="table-header" onclick="toggleContent('tabela-regiao-venda-pessoa')">
-            <h2>Região Venda Pessoa</h2>
+            <h2>Regiao_Venda_Pessoa</h2>
             <span>▼</span>
         </div>
         <div id="tabela-regiao-venda-pessoa" class="table-content" data-type="tabela">
@@ -794,7 +794,7 @@
         </div>
 
         <div class="table-header" onclick="toggleContent('tabela-regiao-venda')">
-            <h2>Região Venda</h2>
+            <h2>Regiao_Venda</h2>
             <span>▼</span>
         </div>
         <div id="tabela-regiao-venda" class="table-content" data-type="tabela">
@@ -958,7 +958,7 @@
         </div>        
 
         <div class="table-header" onclick="toggleContent('tabela-regiao-venda-filial')">
-            <h2>Região Venda Filial</h2>
+            <h2>Regiao_Venda_Filial</h2>
             <span>▼</span>
         </div>
         <div id="tabela-regiao-venda-filial" class="table-content" data-type="tabela">
@@ -1200,7 +1200,7 @@
         </div>
 
         <div class="table-header" onclick="toggleContent('tabela-restricao-venda')">
-            <h2>Restrição Venda</h2>
+            <h2>Restricao_Venda</h2>
             <span>▼</span>
         </div>
         <div id="tabela-restricao-venda" class="table-content" data-type="tabela">
@@ -1847,79 +1847,6 @@
                 </tbody>
             </table>
         </div>
-        <div class="table-header" onclick="toggleContent('tabela-acordo-comercial-parametros')">
-            <h2>Acordo_comercial_parametros</h2>
-            <span>▼</span>
-        </div>
-        <div id="tabela-acordo-comercial-parametros" class="table-content" data-type="tabela">
-            <p class="description">Tabela com os dados de Acordo Comercial Parâmetros</p>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome do Campo</th>
-                        <th class="pkey"></th>
-                        <th>Tipo do Campo</th>
-                        <th>Descrição</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>cd_acordo_comercial_parametros</td>
-                        <td class="pkey">PK</td>
-                        <td>INTEGER</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>cd_acordo_comercial</td>
-                        <td class="pkey"></td>
-                        <td>INTEGER</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>cd_fornecedor_ressarcimento</td>
-                        <td class="pkey"></td>
-                        <td>INTEGER</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>vl_pagamento</td>
-                        <td class="pkey"></td>
-                        <td>NUMERIC(15,2)</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>pr_reembolso_fornecedor</td>
-                        <td class="pkey"></td>
-                        <td>NUMERIC(15,2)</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>cd_regiao_venda</td>
-                        <td class="pkey"></td>
-                        <td>INTEGER</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>ds_acao</td>
-                        <td class="pkey"></td>
-                        <td>TEXT</td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td>created_at</td>
-                        <td class="pkey"></td>
-                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
-                        <td>Data de criação do registro</td>
-                    </tr>
-                    <tr>
-                        <td>updated_at</td>
-                        <td class="pkey"></td>
-                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
-                        <td>Data da última atualização do registro</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
         
         <div class="table-header" onclick="toggleContent('tabela-acordo-comercial-signatario')">
             <h2>Acordo_comercial_signatario</h2>
@@ -2403,12 +2330,12 @@
             </table>
         </div>
 
-        <div class="table-header" onclick="toggleContent('tabela-backup-negociacao-cliente')">
-            <h2>backup_negociacao_cliente</h2>
+        <div class="table-header" onclick="toggleContent('tabela-bodega-mix-pedido')">
+            <h2>bodega_mix_pedido</h2>
             <span>▼</span>
         </div>
-        <div id="tabela-backup-negociacao-cliente" class="table-content" data-type="tabela">
-            <p class="description">Tabela com os dados de Backup Negociação Cliente</p>
+        <div id="tabela-bodega-mix-pedido" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados do pedido da Bodega Mix</p>
             <table>
                 <thead>
                     <tr>
@@ -2420,39 +2347,56 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>cd_negociacao</td>
-                        <td class="pkey">PK</td>
+                        <td>cd_bodega_mix_pedido</td>
+                        <td class="pkey">X</td>
                         <td>INTEGER</td>
                         <td></td>
                     </tr>
                     <tr>
-                        <td>cd_pessoa_cliente</td>
-                        <td class="pkey"></td>
-                        <td>INTEGER</td>
+                        <td>dt_pedido</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_pedido</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_integrado</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>json_pedido</td>
+                        <td></td>
+                        <td>JSONB</td>
                         <td></td>
                     </tr>
                     <tr>
                         <td>created_at</td>
-                        <td class="pkey"></td>
+                        <td></td>
                         <td>TIMESTAMP WITHOUT TIME ZONE</td>
                         <td>Data de criação do registro</td>
                     </tr>
                     <tr>
                         <td>updated_at</td>
-                        <td class="pkey"></td>
+                        <td></td>
                         <td>TIMESTAMP WITHOUT TIME ZONE</td>
                         <td>Data da última atualização do registro</td>
                     </tr>
                     <tr>
-                        <td>id_excluir</td>
-                        <td class="pkey"></td>
-                        <td>SMALLINT</td>
+                        <td>ds_retorno</td>
+                        <td></td>
+                        <td>TEXT</td>
                         <td></td>
                     </tr>
                 </tbody>
             </table>
         </div>
-
         <div class="table-header" onclick="toggleContent('tabela-banco')">
             <h2>banco</h2>
             <span>▼</span>
@@ -2558,8 +2502,1787 @@
                 </tbody>
             </table>
         </div>
-       
+        <div class="table-header" onclick="toggleContent('tabela-book')">
+            <h2>book</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-book" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Book</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey">PK</th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_book</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_grupo_produto</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_inicio</td>
+                        <td class="pkey"></td>
+                        <td>DATE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_termino</td>
+                        <td class="pkey"></td>
+                        <td>DATE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_usuario</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                    <tr>
+                        <td>cd_fabricante</td>
+                        <td class="pkey"></td>
+                        <td>BIGINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_marca</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>   
+        
+        <div class="table-header" onclick="toggleContent('tabela-book-foto')">
+            <h2>book_foto</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-book-foto" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Book Foto</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey">PK</th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_book</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_foto_visita</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_usuario</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                    <tr>
+                        <td>cd_book_foto</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_ponto_extra</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_foto_visita_depois</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_ponto_extra_foto</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
+        <div class="table-header" onclick="toggleContent('tabela-cadastro-cliente')">
+            <h2>cadastro_cliente</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-cadastro-cliente" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Cadastro Cliente</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_cadastro_cliente</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_documento</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_pessoa</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_cep</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_logradouro</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_endereco</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_bairro</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_email</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_telefone</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_cidade</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_atividade</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>vl_sugestao_limite</td>
+                        <td class="pkey"></td>
+                        <td>NUMERIC(15,2)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_condicao_pagamento</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_filial</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_regiao_venda</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_latitude</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_ie</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_contribuinte_final</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_exportacao</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                    <tr>
+                        <td>nm_fantasia</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_telefone_outro</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_email_comunicacao</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_contato</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_cidade</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_sigla</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_status</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_cadastro</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_importacao</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_referencia_externa</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_observacao</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_contribuinte_icms</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_foto_fachada</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-carga')">
+            <h2>carga</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-carga" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Carga</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_carga</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_filial</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_usuario</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_geracao</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_encerrada</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-carga-estoque')">
+            <h2>carga_estoque</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-carga-estoque" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Estoque de Carga</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_carga</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_produto</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>qt_produto</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-carga-saida')">
+            <h2>carga_saida</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-carga-saida" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Saída de Carga</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_carga</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_rota</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_veiculo</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_transportadora</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_semana</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_fechada</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_tipo_frete</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_saida</td>
+                        <td class="pkey"></td>
+                        <td>DATE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_retorno</td>
+                        <td class="pkey"></td>
+                        <td>DATE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_atualizada_armazem_retorno</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_atualizada_financeiro</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_atualizacao_armazem_retorno</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_frete_responsabilidade</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-cargo')">
+            <h2>cargo</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-cargo" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Cargo</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_cargo</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_cargo</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_cbo</td>
+                        <td class="pkey"></td>
+                        <td>BIGINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-carregamento')">
+            <h2>carregamento</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-carregamento" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Carregamento</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_carregamento</td>
+                        <td class="pkey">PK</td>
+                        <td>BIGINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_carregamento</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_saida</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_veiculo</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_motorista</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_transportadora</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_status</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-carregamento-nota-fiscal')">
+            <h2>carregamento_nota_fiscal</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-carregamento-nota-fiscal" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Carregamento Nota Fiscal</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_carregamento</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_nota_fiscal</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-categoria-combo')">
+            <h2>categoria_combo</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-categoria-combo" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Categoria Combo</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_categoria_combo</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_categoria_combo</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_categoria_combo</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                    <tr>
+                        <td>cd_referencia_externa</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-categoria-combo-grupo-ativacao')">
+            <h2>categoria_combo_grupo_ativacao</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-categoria-combo-grupo-ativacao" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Categoria Combo Grupo Ativação</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_categoria_combo</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_grupo_ativacao</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>qt_minima</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                    <tr>
+                        <td>id_contabiliza</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-categoria-conciliacao')">
+            <h2>categoria_conciliacao</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-categoria-conciliacao" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Categoria de Conciliação</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_categoria_conciliacao</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_categoria_conciliacao</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_tipo</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_conta_bancaria</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_plano_conta_credito</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_plano_conta_debito</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                    <tr>
+                        <td>nr_categoria_conciliacao</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-categoria-foto')">
+            <h2>categoria_foto</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-categoria-foto" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Categoria Foto</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_categoria_foto</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_categoria_foto</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_categoria_foto</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>vl_resultado_aprovacao</td>
+                        <td class="pkey"></td>
+                        <td>NUMERIC(15,2)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_nivel_foto</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                    <tr>
+                        <td>id_ponto_natural</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_foto_depois</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_reabastecimento</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_ponto_extra</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_ativo</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-categoria-foto-metrica')">
+            <h2>categoria_foto_metrica</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-categoria-foto-metrica" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Categoria Foto Métrica</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_categoria_foto</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_metrica</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>vl_peso</td>
+                        <td class="pkey"></td>
+                        <td>NUMERIC(15,2)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-categoria-produto')">
+            <h2>categoria_produto</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-categoria-produto" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Categoria de Produto</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_categoria_produto</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_categoria_produto</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_referencia_externa</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-centro-custo')">
+            <h2>centro_custo</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-centro-custo" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Centro de Custo</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_centro_custo</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_centro_custo</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="table-header" onclick="toggleContent('tabela-cfop')">
+            <h2>cfop</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-cfop" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados do CFOP</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nr_cfop</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_cfop</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_tipo</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_documento</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_lpi</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_financeiro</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_tributacao_pis_cofins</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-cfop-operacao-fiscal')">
+            <h2>cfop_operacao_fiscal</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-cfop-operacao-fiscal" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados da Operação Fiscal do CFOP</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>nr_cfop</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_operacao_fiscal</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_observacao_fiscal</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-header" onclick="toggleContent('tabela-chave-aplicativo')">
+            <h2>chave_aplicativo</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-chave-aplicativo" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Chaves de Aplicativo</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_chave_aplicativo</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_chave_aplicativo</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_ativo</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_aplicativo</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_regiao_venda</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_ativacao</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_aparelho</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_marca</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_modelo</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_identificador</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>ds_versao_aplicativo</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                    <tr>
+                        <td>ds_versao_maxima</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-checklist-produto-visita')">
+            <h2>checklist_produto_visita</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-checklist-produto-visita" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Checklist de Produto para Visita</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_checklist_produto_visita</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_visita_cliente</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_produto</td>
+                        <td class="pkey"></td>
+                        <td>BIGINT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>dt_check</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                    <tr>
+                        <td>cd_mix_ideal</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>id_situacao</td>
+                        <td class="pkey"></td>
+                        <td>SMALLINT</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-cidade')">
+            <h2>cidade</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-cidade" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Cidade</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_cidade</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_cidade</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_uf</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_ibge</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="table-header" onclick="toggleContent('tabela-cidade-cep')">
+            <h2>cidade_cep</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-cidade-cep" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de Cidade e CEP</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_cidade_cep</td>
+                        <td class="pkey">PK</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_cidade</td>
+                        <td class="pkey"></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_cep</td>
+                        <td class="pkey"></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td class="pkey"></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-header" onclick="toggleContent('tabela-cidade-filial')">
+            <h2>cidade_filial</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-cidade-filial" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de cidade e filial</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_cidade</td>
+                        <td class="pkey">X</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_pessoa_filial</td>
+                        <td class="pkey">X</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-header" onclick="toggleContent('tabela-classificacao-fiscal')">
+            <h2>classificacao_fiscal</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-classificacao-fiscal" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de classificação fiscal</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_classificacao_fiscal</td>
+                        <td class="pkey">X</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_classificacao_fiscal</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nm_classificacao_fiscal</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-header" onclick="toggleContent('tabela-cliente-base-disponivel')">
+            <h2>cliente_base_disponivel</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-cliente-base-disponivel" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados da base de clientes disponível</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_cliente_base_disponivel</td>
+                        <td class="pkey">X</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>nr_cnpj</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_base_dados</td>
+                        <td></td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="table-header" onclick="toggleContent('tabela-cliente-pagamento')">
+            <h2>cliente_pagamento</h2>
+            <span>▼</span>
+        </div>
+        <div id="tabela-cliente-pagamento" class="table-content" data-type="tabela">
+            <p class="description">Tabela com os dados de pagamento dos clientes</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Campo</th>
+                        <th class="pkey"></th>
+                        <th>Tipo do Campo</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>cd_pessoa</td>
+                        <td class="pkey">X</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_tipo_pagamento</td>
+                        <td class="pkey">X</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>cd_condicao_pagamento</td>
+                        <td class="pkey">X</td>
+                        <td>INTEGER</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>created_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data de criação do registro</td>
+                    </tr>
+                    <tr>
+                        <td>updated_at</td>
+                        <td></td>
+                        <td>TIMESTAMP WITHOUT TIME ZONE</td>
+                        <td>Data da última atualização do registro</td>
+                    </tr>
+                    <tr>
+                        <td>cd_referencia_externa</td>
+                        <td></td>
+                        <td>TEXT</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+                                
     </div>
     <script src="scripts.js"></script>
 </body>
