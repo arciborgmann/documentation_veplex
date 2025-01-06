@@ -1,0 +1,43 @@
+Tabela,Campo,PK,Tipo,Descrição
+combo,cd_combo,X,integer, 
+combo,nm_combo,,text, 
+combo,dt_inicio,,date, 
+combo,dt_termino,,date, 
+combo,ds_banner,,text, 
+combo,created_at,,timestamp,Data de criação do registro 
+combo,updated_at,,timestamp,Data da última atualização do registro 
+combo,cd_referencia_externa,,text, 
+combo,cd_marca,,integer, 
+combo,id_beneficio,,smallint, 
+combo,vl_ativacao,,"numeric(15,2) ", 
+combo,id_considera_produto,,smallint, 
+combo,id_recebe_desconto,,smallint, 
+combo,vl_maximo,,"numeric(15,2) ", 
+combo,ds_codigo_externo,,text, 
+combo,id_desabilita_verba,,smallint, 
+combo,id_verba_flex,,smallint, 
+combo_categoria,cd_combo,X,integer, 
+combo_categoria,cd_categoria_combo,X,integer, 
+combo_categoria,pr_desconto,,"numeric(15,2) ", 
+combo_categoria,qt_minima,,integer, 
+combo_categoria,created_at,,timestamp,Data de criação do registro 
+combo_categoria,updated_at,,timestamp,Data da última atualização do registro 
+combo_cliente,cd_combo,X,integer, 
+combo_cliente,cd_pessoa,X,integer, 
+combo_cliente,created_at,,timestamp,Data de criação do registro 
+combo_cliente,updated_at,,timestamp,Data da última atualização do registro 
+combo_cliente,id_excluir,,smallint, 
+combo_parametro_geracao_verba,cd_combo,X,integer, 
+combo_parametro_geracao_verba,qt_grupo_ativacao,X,text, 
+combo_parametro_geracao_verba,pr_geracao,,"numeric(15,2) ", 
+combo_parametro_geracao_verba,created_at,,timestamp,Data de criação do registro 
+combo_parametro_geracao_verba,updated_at,,timestamp,Data da última atualização do registro 
+combo_parametro_geracao_verba,cd_referencia_externa,,text, 
+combo_parametro_geracao_verba,cd_negociacao,,integer, 
+combo_produto_bonificacao,cd_combo,X,integer, 
+combo_produto_bonificacao,cd_produto,X,bigint, 
+combo_produto_bonificacao,qt_produto,,integer, 
+combo_produto_bonificacao,cd_unidade_medida,,integer, 
+combo_produto_bonificacao,id_multiplo,,smallint, 
+combo_produto_bonificacao,created_at,,timestamp,Data de criação do registro 
+combo_produto_bonificacao,updated_at,,timestamp,Data da última atualização do registro 

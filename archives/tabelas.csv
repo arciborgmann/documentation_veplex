@@ -1,0 +1,153 @@
+Tabela,Campo,PK,Tipo,Descrição
+combo_produto_geracao_verba,cd_composicao_objetivo,X,integer, 
+combo_produto_geracao_verba,ds_composicao_objetivo,,text, 
+combo_produto_geracao_verba,id_pagamento,,smallint, 
+combo_produto_geracao_verba,id_tipo_apuracao,,smallint, 
+combo_produto_geracao_verba,created_at,,timestamp,Data de criação do registro 
+combo_produto_geracao_verba,updated_at,,timestamp,Data da última atualização do registro 
+comunicado,cd_comunicado,X,integer, 
+comunicado,nm_comunicado,,text, 
+comunicado,ds_comunicado,,text, 
+comunicado,dt_inicio,,date, 
+comunicado,dt_fim,,date, 
+comunicado,cd_usuario_criacao,,integer, 
+comunicado,created_at,,timestamp,Data de criação do registro 
+comunicado,updated_at,,timestamp,Data da última atualização do registro 
+comunicado_destino,cd_comunicado_destino,X,integer, 
+comunicado_destino,cd_regiao_venda,,integer, 
+comunicado_destino,created_at,,timestamp,Data de criação do registro 
+comunicado_destino,updated_at,,timestamp,Data da última atualização do registro 
+comunicado_destino,cd_comunicado,X,integer, 
+condicao_pagamento,cd_condicao_pagamento,X,integer, 
+condicao_pagamento,nm_condicao_pagamento,,text, 
+condicao_pagamento,nr_dias,,smallint, 
+condicao_pagamento,vl_indice_preco,,"numeric(15,4) ", 
+condicao_pagamento,nr_parcela,,smallint, 
+condicao_pagamento,nr_dias_intervalo,,smallint, 
+condicao_pagamento,id_envio_app,,smallint, 
+condicao_pagamento,created_at,,timestamp,Data de criação do registro 
+condicao_pagamento,updated_at,,timestamp,Data da última atualização do registro 
+condicao_pagamento,id_coluna_preco,,smallint, 
+condicao_pagamento,cd_referencia_externa,,text, 
+condicao_pagamento,vl_parcela_minima,,"numeric(15,2) ", 
+condicao_pagamento,id_envio_ecommerce,,smallint, 
+condicao_pagamento,id_bonificacao,,smallint, 
+condicao_pagamento,id_merchandising,,smallint, 
+condicao_pagamento_categoria,cd_condicao_pagamento,X,integer, 
+condicao_pagamento_categoria,cd_categoria_produto,X,integer, 
+condicao_pagamento_categoria,created_at,,timestamp,Data de criação do registro 
+condicao_pagamento_categoria,updated_at,,timestamp,Data da última atualização do registro 
+condicao_pagamento_empresa,cd_condicao_pagamento,X,integer, 
+condicao_pagamento_empresa,cd_pessoa_empresa,X,integer, 
+condicao_pagamento_empresa,created_at,,timestamp,Data de criação do registro 
+condicao_pagamento_empresa,updated_at,,timestamp,Data da última atualização do registro 
+condicao_pagamento_fabricante,cd_condicao_pagamento,X,integer, 
+condicao_pagamento_fabricante,cd_fabricante,X,bigint, 
+condicao_pagamento_fabricante,created_at,,timestamp,Data de criação do registro 
+condicao_pagamento_fabricante,updated_at,,timestamp,Data da última atualização do registro 
+condicao_pagamento_marca,cd_condicao_pagamento,X,integer, 
+condicao_pagamento_marca,cd_marca,X,integer, 
+condicao_pagamento_marca,created_at,,timestamp,Data de criação do registro 
+condicao_pagamento_marca,updated_at,,timestamp,Data da última atualização do registro 
+condicao_pagamento_produto,cd_condicao_pagamento,X,integer, 
+condicao_pagamento_produto,cd_produto,X,bigint, 
+condicao_pagamento_produto,created_at,,timestamp,Data de criação do registro 
+condicao_pagamento_produto,updated_at,,timestamp,Data da última atualização do registro 
+condicao_pagamento_produto_restricao,cd_condicao_pagamento,X,integer, 
+condicao_pagamento_produto_restricao,cd_produto,X,bigint, 
+condicao_pagamento_produto_restricao,created_at,,timestamp,Data de criação do registro 
+condicao_pagamento_produto_restricao,updated_at,,timestamp,Data da última atualização do registro 
+consultor_digital,cd_pessoa,X,integer, 
+consultor_digital,id_ativo,X,smallint, 
+consultor_digital,created_at,,timestamp,Data de criação do registro 
+consultor_digital,updated_at,,timestamp,Data da última atualização do registro 
+conta_bancaria,cd_conta_bancaria,X,integer, 
+conta_bancaria,cd_pessoa,,integer, 
+conta_bancaria,cd_banco,,integer, 
+conta_bancaria,cd_agencia,,integer, 
+conta_bancaria,nr_conta,,text, 
+conta_bancaria,nr_digito,,text, 
+conta_bancaria,id_tipo,,smallint, 
+conta_bancaria,id_conciliaacao,,smallint, 
+conta_bancaria,created_at,,timestamp,Data de criação do registro 
+conta_bancaria,updated_at,,timestamp,Data da última atualização do registro 
+conta_bancaria,id_principal,,text, 
+conta_bancaria_conciliacao_saldo,cd_conta_bancaria,X,integer, 
+conta_bancaria_conciliacao_saldo,vl_saldo_inicial,,"numeric(15,2) ", 
+conta_bancaria_conciliacao_saldo,vl_saldo_final,,"numeric(15,2) ", 
+conta_bancaria_conciliacao_saldo,created_at,,timestamp,Data de criação do registro 
+conta_bancaria_conciliacao_saldo,updated_at,,timestamp,Data da última atualização do registro 
+conta_bancaria_conciliacao_saldo,dt_saldo_inicial,,date, 
+conta_bancaria_conciliacao_saldo,dt_saldo_final,,date, 
+contrato_funcionario,cd_contrato_funcionario,X,integer, 
+contrato_funcionario,cd_pessoa_filial,,integer, 
+contrato_funcionario,cd_pessoa_funcionario,,integer, 
+contrato_funcionario,dt_admissao,,date, 
+contrato_funcionario,dt_aviso_previo,,date, 
+contrato_funcionario,dt_demissao,,date, 
+contrato_funcionario,cd_cargo,,integer, 
+contrato_funcionario,created_at,,timestamp,Data de criação do registro 
+contrato_funcionario,updated_at,,timestamp,Data da última atualização do registro 
+credito_liberacao,cd_credito_liberacao,X,integer, 
+credito_liberacao,cd_regiao_venda,,integer, 
+credito_liberacao,qt_gps,,integer, 
+credito_liberacao,qt_ponto,,integer, 
+credito_liberacao,dt_recebimento,,timestamp, 
+credito_liberacao,created_at,,timestamp,Data de criação do registro 
+credito_liberacao,updated_at,,timestamp,Data da última atualização do registro 
+csta,nr_csta,X,text, 
+csta,ds_csta,,text, 
+csta,created_at,,timestamp,Data de criação do registro 
+csta,updated_at,,timestamp,Data da última atualização do registro 
+cstb,nr_cstb,X,text, 
+cstb,ds_cstb,,text, 
+cstb,created_at,,timestamp,Data de criação do registro 
+cstb,updated_at,,timestamp,Data da última atualização do registro 
+desconto,cd_desconto,X,integer, 
+desconto,nm_desconto,,text, 
+desconto,id_desconto_fornecedor,,smallint, 
+desconto,id_a_vista,,smallint, 
+desconto,id_incide_custo,,smallint, 
+desconto,id_tipo_desconto,,smallint, 
+desconto,nr_ordem,,smallint, 
+desconto,created_at,,timestamp,Data de criação do registro 
+desconto,updated_at,,timestamp,Data da última atualização do registro 
+despesa,cd_depesa,X,integer, 
+despesa,cd_movimento,,bigint, 
+despesa,cd_despesa_historico,,integer, 
+despesa,cd_pessoa_fornecedor,,integer, 
+despesa,cd_pessoa_filial,,integer, 
+despesa,cd_pessoa_usuario,,integer, 
+despesa,dt_lancamento,,date, 
+despesa,dt_documento,,date, 
+despesa,dt_vencimento,,date, 
+despesa,nr_documento,,text, 
+despesa,vl_despesa,,"numeric(15,2) ", 
+despesa,vl_reembolso,,"numeric(15,2) ", 
+despesa,ds_observacao,,text, 
+despesa,nr_chave,,text, 
+despesa,created_at,,timestamp,Data de criação do registro 
+despesa,updated_at,,timestamp,Data da última atualização do registro 
+despesa_historico,cd_despesa_historico,X,integer, 
+despesa_historico,nm_depesa_historico,,text, 
+despesa_historico,created_at,,timestamp,Data de criação do registro 
+despesa_historico,updated_at,,timestamp,Data da última atualização do registro 
+despesa_historico_participacao,cd_despesa_historico,X,integer, 
+despesa_historico_participacao,cd_unidade_operacional,X,integer, 
+despesa_historico_participacao,cd_centro_custo,X,integer, 
+despesa_historico_participacao,cd_pessoa_filial,X,integer, 
+despesa_historico_participacao,dt_vigencia,X,date, 
+despesa_historico_participacao,pr_participacao,X,"numeric(15,2) ", 
+despesa_historico_participacao,created_at,,timestamp,Data de criação do registro 
+despesa_historico_participacao,updated_at,,timestamp,Data da última atualização do registro 
+despesa_produto,cd_despesa_produto,X,integer, 
+despesa_produto,cd_despesa,,integer, 
+despesa_produto,cd_produto,,bigint, 
+despesa_produto,qt_produto,,"numeric(10,3) ", 
+despesa_produto,vl_unitario,,"numeric(10,3) ", 
+despesa_produto,vl_total,,"numeric(10,2) ", 
+despesa_produto,ds_especificao,,text, 
+despesa_produto,cd_despesa_historico,,integer, 
+despesa_produto,vl_reembolso,,"numeric(15,2) ", 
+despesa_produto,created_at,,timestamp,Data de criação do registro 
+despesa_produto,updated_at,,timestamp,Data da última atualização do registro 

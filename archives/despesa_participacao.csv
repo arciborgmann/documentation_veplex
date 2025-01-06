@@ -1,0 +1,11 @@
+Tabela,Campo,PK,Tipo,Descrição
+despesa_participacao,cd_despesa_historico,X,integer, 
+despesa_participacao,cd_despesa,,integer, 
+despesa_participacao,cd_unidade_operacional,,integer, 
+despesa_participacao,cd_centro_custo,,integer, 
+despesa_participacao,dt_lancamento,,date, 
+despesa_participacao,pr_lancamento,,"numeric(15,2) ", 
+despesa_participacao,id_validacao,,smallint, 
+despesa_participacao,cd_pessoa_usuario,,smallint, 
+despesa_participacao,created_at,,timestamp,Data de criação do registro 
+despesa_participacao,updated_at,,timestamp,Data da última atualização do registro 

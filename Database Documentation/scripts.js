@@ -132,25 +132,36 @@ function atualizarInformacoes(tabelas, campos) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    const container = document.getElementById('container'); // Certifique-se de que o container está correto
-    const tableHeaders = Array.from(container.querySelectorAll('.table-header')); // Seleciona todos os cabeçalhos de tabela
-    
-    // Ordena as tabelas com base no texto do h2
-    tableHeaders.sort((a, b) => {
-        const nameA = a.querySelector('h2').innerText.trim().toLowerCase();
-        const nameB = b.querySelector('h2').innerText.trim().toLowerCase();
-        return nameA.localeCompare(nameB); // Ordena os cabeçalhos de forma alfabética
+    const container = document.querySelector('.container'); // Busca pelo elemento com a classe 'container'
+    if (!container) {
+        console.error("Elemento com a classe 'container' não encontrado.");
+        return; // Para a execução se o container não existir
+    }
+
+    // Código de ordenação de tabelas
+    const tablePairs = Array.from(container.querySelectorAll('.table-header')).map(header => {
+        return {
+            header: header,
+            content: header.nextElementSibling // O conteúdo logo após o cabeçalho
+        };
     });
 
-    // Reorganiza as divs das tabelas dentro do container
-    tableHeaders.forEach(header => {
-        // Adiciona o cabeçalho (h2) novamente na ordem correta
-        container.appendChild(header);
+    // Ordena os pares com base no texto do h2 dentro do cabeçalho
+    tablePairs.sort((a, b) => {
+        const nameA = a.header.querySelector('h2').innerText.trim().toLowerCase();
+        const nameB = b.header.querySelector('h2').innerText.trim().toLowerCase();
+        return nameA.localeCompare(nameB); // Ordena de forma alfabética
+    });
 
-        // Encontra o conteúdo da tabela (que vem logo após o cabeçalho)
-        const content = header.nextElementSibling;
-        
-        // Adiciona o conteúdo da tabela na ordem correta
-        container.appendChild(content);
+    // Remove todos os elementos atuais do container
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+    }
+
+    // Reanexa os elementos no container na nova ordem
+    tablePairs.forEach(pair => {
+        container.appendChild(pair.header);  // Adiciona o cabeçalho
+        container.appendChild(pair.content); // Adiciona o conteúdo correspondente
     });
 });
+
