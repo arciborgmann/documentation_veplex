@@ -1,8 +1,0 @@
-Tabela,Campo,PK,Tipo,Descrição
-cliente_situacao,cd_cliente_situacao,X,integer, 
-cliente_situacao,nm_cliente_situacao,,text, 
-cliente_situacao,id_tipo_situacao,,smallint, 
-cliente_situacao,nr_cor,,text, 
-cliente_situacao,id_bloqueia_venda,,smallint, 
-cliente_situacao,created_at,,timestamp,Data de criação do registro 
-cliente_situacao,updated_at,,timestamp,Data da última atualização do registro 
