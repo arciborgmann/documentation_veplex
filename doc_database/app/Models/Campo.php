@@ -9,7 +9,6 @@ class Campo extends Model
 {
     use HasFactory;
 
-    // Especifique o nome da tabela se diferente do padrão
     protected $table = 'campo'; // Nome da tabela de campos
 
     // Permitir atribuição em massa para esses campos

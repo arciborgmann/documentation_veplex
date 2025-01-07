@@ -9,8 +9,7 @@ class Tabela extends Model
 {
     use HasFactory;
 
-    // Especifique o nome da tabela se diferente do padrão
-    protected $table = 'tabela'; // Corrigido para plural (de acordo com convenção)
+    protected $table = 'tabela';
 
     // Permitir atribuição em massa para esses campos
     protected $fillable = ['nome', 'descricao'];

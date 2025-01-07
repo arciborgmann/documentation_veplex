@@ -11,19 +11,60 @@
         <img src="{{ asset('img/logo-veplex.png') }}" alt="Veplex" class="company-logo">
         <h1 class="header-title">Database Documentation</h1>
     </header>
-    <hr>
     <div class="search">
-        <div class="upload">
-            @if(session('success'))
-                <p>{{ session('success') }}</p>
-            @endif
-            <form action="{{ url('upload') }}" method="POST" enctype="multipart/form-data">
+        <div class="control-buttons">
+            <!-- Botão para upload -->
+            <button class="upload-button" onclick="toggleUpload()" id="toggle-upload-button">Arquivo</button>
+            
+            <!-- Botão para adicionar tabela 
+            <button class="table-button" onclick="toggleTableForm()" id="toggle-table-button">Tabela</button> -->
+        </div>
+
+        <!-- Bloco de upload -->
+        <div id="upload-block" style="display: none;">
+            <form class="upload-form" action="{{ url('upload') }}" method="POST" enctype="multipart/form-data">
                 @csrf
-                <input type="file" name="csv_file" accept=".csv">
-                <button type="submit">Upload</button>
+                <div class="file-input-wrapper">
+                    <label class="file-label" for="csv_file">Selecione o arquivo</label>
+                    <input id="csv_file" type="file" name="csv_file" accept=".csv" class="file-input">
+                </div>
+                <button type="submit" class="upload-button">Upload</button>
             </form>
-        </div>    
-        <hr>
+        </div>
+
+        <!-- Bloco de adição de tabela -->
+        <div id="table-form-block" style="display: none;">
+            <form>
+                @csrf
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="tabela">Tabela</label>
+                        <input type="text" id="tabela" name="tabela" placeholder="Nome da Tabela">
+                    </div>
+                    <div class="form-group">
+                        <label for="campo">Campo</label>
+                        <input type="text" id="campo" name="campo" placeholder="Nome do Campo">
+                    </div>
+                    <div class="form-group pk">
+                        <label for="pk">PK</label>
+                        <input type="checkbox" id="pk" name="pk">
+                    </div>
+                    <div class="form-group">
+                        <label for="tipo">Tipo</label>
+                        <input type="text" id="tipo" name="tipo" placeholder="Tipo do Campo">
+                    </div>
+                    <div class="form-group description-with-button">
+                        <label for="descricao">Descrição</label>
+                        <div class="description-input-wrapper">
+                            <input type="text" id="descricao" name="descricao" placeholder="Descrição">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="save-button">Salvar</button>
+                    </div>
+                </div>  
+            </form>
+        </div>
         <!-- Cards de informações -->
         <div class="info-cards-container">
             <div class="info-card">

@@ -12,20 +12,217 @@ body {
     justify-content: center; /* Centraliza horizontalmente */
 }
 
+/* Estilo geral */
 .upload {
+    padding-bottom: 10px;
+}
+
+/*------------------------------------------------------------*/
+/* Estilo do formulário */
+.upload-form {
     display: flex;
-    flex-direction: column; /* Alinha logo acima do título */
-    align-items: center; /* Centraliza o conteúdo no header */
+    flex-direction: column; /* Itens em coluna */
+    justify-content: center; /* Centraliza verticalmente dentro do formulário */
+    align-items: center; /* Centraliza horizontalmente */
+    padding: 10px 20px 10px 20px;
+    border-radius: 10px;
+    max-width: 358px;
+    width: 90%; /* Responsivo para telas menores */
+    margin: 10px auto;
 }
 
-button[type='submit'] {
+/* Container para a descrição e o botão */
+.description-with-button {
+    display: flex;
+    flex-direction: column;  /* Faz o label ficar acima do campo */
+    /*gap: 5px;                /* Adiciona um pequeno espaço entre o label e o campo */
+}
+
+/* Wrapper para o campo de descrição e o botão */
+.description-input-wrapper {
+    display: flex;
+    align-items: center;      /* Alinha o botão verticalmente no centro do campo de texto */
+    /*gap: 10px;                 Adiciona espaçamento entre o campo de descrição e o botão */
+}
+
+/* Ajuste do campo de descrição */
+.description-input-wrapper input {
+    flex: 1;             /* Faz o campo de descrição ocupar o máximo possível de espaço */
+    padding: 8px;        /* Ajuste de preenchimento */
+    border-radius: 4px;  /* Bordas arredondadas */
+    border: 1px solid #ccc; /* Borda leve */
+    font-size: 12px;     /* Tamanho da fonte */
+}
+
+/* Estilo do botão de upload */
+.upload-button {
     background-color: #4b0082;
-    color: #ffffff;
-    border-radius: 4px;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px; /* Espaçamento entre o botão e o campo de arquivo */
+    width: 100px;
 }
 
+.table-button {
+    background-color: #4b0082;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 15px; /* Espaçamento entre o botão e o campo de arquivo */
+    width: 100px;
+}
 
+.upload-button:hover {
+    background-color: #371061;
+    transform: scale(1.05);
+}
 
+.upload-button:active {
+    transform: scale(1);
+}
+
+.table-button:hover {
+    background-color: #371061;
+    transform: scale(1.05);
+}
+
+.table-button:active {
+    transform: scale(1);
+}
+
+/* Estilo do campo de arquivo */
+.file-input-wrapper {
+    position: relative;
+    width: 100%; /* Ocupa toda a largura do formulário */
+}
+
+.file-label {
+    display: block;
+    background-color: #4b0082;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.file-label:hover {
+    background-color: #371061;
+    transform: scale(1.02);
+}
+
+.file-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.control-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center; /* Centraliza os botões horizontalmente */
+    margin-bottom: 20px;
+}
+
+#upload-block, #table-form-block {
+    margin-top: 20px;
+    border: 1px solid #4b0082;
+    border-radius: 5px;
+    text-align: center; /* Centraliza o conteúdo interno */
+}
+
+#table-form-block {
+    display: block; /* Para ser exibido quando necessário */
+}
+
+label {
+    font-size: 12px; /* Fonte menor para os labels */
+    font-weight: bold;
+    color: #4b0082;
+    display: block; /* Força o label a ficar acima do campo */
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Espaço entre os campos */
+    margin-bottom: 15px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.form-group {
+    flex: 1 1 calc(20% - 15px); /* Tamanho padrão para campos maiores */
+    min-width: 150px; /* Tamanho mínimo dos campos */
+    box-sizing: border-box;
+}
+
+.form-group.pk {
+    flex: 0 0 80px; /* Campo PK fixo e menor */
+}
+
+input, select {
+    font-size: 12px; /* Ajusta o tamanho da fonte dos campos */
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center; /* Centraliza o checkbox verticalmente com o label */
+    gap: 5px; /* Espaçamento entre o checkbox e o label */
+    flex-wrap: wrap;
+}
+
+.checkbox-wrapper input[type="checkbox"] {
+    flex-shrink: 0; /* Impede o checkbox de encolher */
+    width: auto; /* O checkbox deve ocupar apenas o espaço necessário */
+}
+
+.save-button-wrapper {
+    display: flex;
+    justify-content: center; /* Centraliza o botão */
+    width: 100%; /* Garante que o botão ocupe toda a largura disponível */
+    margin-top: 10px; /* Adiciona espaçamento acima do botão */
+}
+
+.save-button {
+    padding: 10px 15px; /* Tamanho do botão */
+    background-color: #4b0082; /* Cor do botão */
+    color: white; /* Cor do texto do botão */
+    border: none; /* Remove borda padrão */
+    border-radius: 4px; /* Bordas arredondadas */
+    cursor: pointer; /* Mostra o cursor pointer */
+    font-weight: bold;
+    width: 100px; /* Garante que o botão ocupe toda a largura disponível */
+}
+
+.save-button:hover {
+    background-color: #3a006d;
+}
+
+/*------------------------------------------------------------*/
 .page-header {
     display: flex;
     flex-direction: column; /* Alinha logo acima do título */
@@ -75,7 +272,6 @@ button[type='submit'] {
     font-weight: bold;
 }
 
-
 .container {
     text-align: center;
     margin: 0px 10px 10px 10px;
@@ -119,7 +315,6 @@ input[type="text"] {
     font-size: 12px;
     text-transform: uppercase;
 }
-
 
 .table-content {
     display: none;
@@ -168,8 +363,7 @@ table th {
 .checkbox-container {
     display: flex;
     justify-content: center;
-    align-items: center; /* Alinha o checkbox e o texto no centro */
-    gap: 16px; /* Espaçamento entre os checkboxes */
+    gap: 20px; /* Espaçamento entre os checkboxes */
     margin: 0px 10px 20px 10px;             /* Espaço entre o contêiner e outros elementos */
     font-size: 12px;
 }
@@ -179,16 +373,19 @@ table th {
     align-items: center; /* Alinha o checkbox e o texto no centro */
 }
 
-/* Estilo para o checkbox, caso queira personalizá-lo */
+/* Estilo para o checkbox */
 input[type="checkbox"] {
     appearance: none;         /* Remove o estilo padrão */
     -webkit-appearance: none; /* Para navegadores baseados em WebKit */
     width: 16px;              /* Define a largura do checkbox */
     height: 16px;             /* Define a altura do checkbox */
     border: 2px solid #4b0082; /* Borda personalizada */
-    border-radius: 4px;       /* Deixa os cantos arredondados (opcional) */
+    border-radius: 4px;       /* Deixa os cantos arredondados */
     background-color: white;  /* Cor de fundo */
-    cursor: pointer;          /* Cursor de ponteiro ao passar o mouse */
+    cursor: pointer;         /* Cursor de ponteiro */
+    display: inline-flex;     /* Garante o alinhamento correto com o conteúdo */
+    align-items: center;      /* Alinha o conteúdo verticalmente */
+    justify-content: center;  /* Alinha o conteúdo horizontalmente */
 }
 
 input[type="checkbox"]:checked {

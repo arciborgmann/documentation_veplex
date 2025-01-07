@@ -7,6 +7,41 @@ function toggleContent(id) {
     }
 }
 
+function toggleUpload() {
+    const uploadBlock = document.getElementById('upload-block');
+    const toggleButton = document.getElementById('toggle-upload-button');
+    const tableFormBlock = document.getElementById('table-form-block');
+    const tableButton = document.getElementById('toggle-table-button');
+
+    // Alterna a exibição do bloco
+    if (uploadBlock.style.display === 'none' || uploadBlock.style.display === '') {
+        uploadBlock.style.display = 'block';
+        tableFormBlock.style.display = 'none';
+        toggleButton.textContent = 'Fechar'; 
+        tableButton.textContent = 'Tabela';
+    } else {
+        uploadBlock.style.display = 'none';
+        toggleButton.textContent = 'Arquivo'; // Atualiza o texto para "Arquivo"
+    }
+}
+
+function toggleTableForm() {
+    const tableFormBlock = document.getElementById('table-form-block');
+    const tableButton = document.getElementById('toggle-table-button');
+    const uploadBlock = document.getElementById('upload-block');
+    const toggleButton = document.getElementById('toggle-upload-button');
+
+    if (tableFormBlock.style.display === 'none' || tableFormBlock.style.display === '') {
+        tableFormBlock.style.display = 'block';
+        tableButton.textContent = 'Fechar';
+        uploadBlock.style.display = 'none';
+        toggleButton.textContent = 'Arquivo';
+    } else {
+        tableFormBlock.style.display = 'none';
+        tableButton.textContent = 'Tabela';
+    }
+}
+
 // Função que atualiza os valores dos cards com a quantidade de tabelas e campos encontrados
 function atualizarInformacoes(tabelas, campos) {
     document.getElementById('tabelas-count').innerText = tabelas;
