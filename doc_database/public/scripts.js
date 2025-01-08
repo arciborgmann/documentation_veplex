@@ -65,7 +65,7 @@ function filterTables() {
         // Selecionar todas as células da tabela, exceto a coluna "Descrição"
         const tableCells = Array.from(tableContent.querySelectorAll("td")).filter(cell => {
             const columnIndex = Array.from(cell.parentElement.children).indexOf(cell); // Índice da célula
-            return columnIndex !== 3; 
+            return columnIndex == 0; 
         });
 
         // Limpar destaques anteriores

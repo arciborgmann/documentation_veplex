@@ -14,7 +14,7 @@
     <div class="search">
         <div class="control-buttons">
             <!-- Botão para upload -->
-            <button class="upload-button" onclick="toggleUpload()" id="toggle-upload-button">Arquivo</button>
+            <button class="upload-button" onclick="toggleUpload()" id="toggle-upload-button">+ Arquivo</button>
             
             <!-- Botão para adicionar tabela 
             <button class="table-button" onclick="toggleTableForm()" id="toggle-table-button">Tabela</button> -->
