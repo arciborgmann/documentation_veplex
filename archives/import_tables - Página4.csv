@@ -1,0 +1,288 @@
+Tabela,Campo,PK,Tipo,Descrição
+nota_fiscal_produto_icms,cd_nota_fiscal_produto,X,bigint,
+nota_fiscal_produto_icms,vl_base,,"numeric(15,2)",
+nota_fiscal_produto_icms,pr_aliquota,,"numeric(5,2)",
+nota_fiscal_produto_icms,vl_icms,,"numeric(15,2)",
+nota_fiscal_produto_icms,vl_isento,,"numeric(15,2)",
+nota_fiscal_produto_icms,vl_outras,,"numeric(15,2)",
+nota_fiscal_produto_icms,vl_diferimento,,"numeric(15,2)",
+nota_fiscal_produto_icms,pr_diferimento,,"numeric(5,2)",
+nota_fiscal_produto_icms,vl_base_fcp,,"numeric(15,2)",
+nota_fiscal_produto_icms,pr_aliquota_fcp,,"numeric(15,2)",
+nota_fiscal_produto_icms,vl_fcp,,"numeric(15,2)",
+nota_fiscal_produto_icms,created_at,,timestamp,Data de criação do registro
+nota_fiscal_produto_icms,updated_at,,timestamp,Data da última atualização do registro
+nota_fiscal_produto_icms_efetivo,cd_nota_fiscal_produto,X,bigint,
+nota_fiscal_produto_icms _efetivo,vl_base,,"numeric(15,2)",
+nota_fiscal_produto_icms _efetivo,pr_aliquota,,"numeric(5,2)",
+nota_fiscal_produto_icms _efetivo,vl_icms,,"numeric(15,2)",
+nota_fiscal_produto_icms _efetivo,created_at,,timestamp,Data de criação do registro
+nota_fiscal_produto_icms _efetivo,updated_at,,timestamp,Data da última atualização do registro
+nota_fiscal_produto_icms_st,cd_nota_fiscal_produto,X,bigint,
+nota_fiscal_produto_icms_st,vl_base_st,,"numeric(15,2)",
+nota_fiscal_produto_icms_st,pr_aliquota,,"numeric(5,2)",
+nota_fiscal_produto_icms_st,vl_icms_st,,"numeric(15,2)",
+nota_fiscal_produto_icms_st,vl_base_fcp,,"numeric(15,2)",
+nota_fiscal_produto_icms_st,pr_aliquota_fcp,,"numeric(15,2)",
+nota_fiscal_produto_icms_st,vl_fcp,,"numeric(15,2)",
+nota_fiscal_produto_icms_st,created_at,,timestamp,Data de criação do registro
+nota_fiscal_produto_icms_st,updated_at,,timestamp,Data da última atualização do registro
+nota_fiscal_produto_icms_st,cd_nota_fiscal_produto,X,bigint,
+nota_fiscal_produto_icms_st,vl_base_st,,"numeric(15,2)",
+nota_fiscal_produto_icms_st,pr_aliquota,,"numeric(5,2)",
+nota_fiscal_produto_icms_st,vl_icms_st,,"numeric(15,2)",
+nota_fiscal_produto_icms_st,vl_base_fcp,,"numeric(15,2)",
+nota_fiscal_produto_icms_st,pr_aliquota_fcp,,"numeric(15,2)",
+nota_fiscal_produto_icms_st,vl_fcp,,"numeric(15,2)",
+nota_fiscal_produto_icms_st,created_at,,timestamp,Data de criação do registro
+nota_fiscal_produto_icms_st,updated_at,,timestamp,Data da última atualização do registro
+nota_fiscal_produto_ipi,cd_nota_fiscal_produto,X,bigint,
+nota_fiscal_produto_ipi,vl_base,,"numeric(15,2)",
+nota_fiscal_produto_ipi,pr_aliquota,,"numeric(5,2)",
+nota_fiscal_produto_ipi,vl_ipi,,"numeric(15,2)",
+nota_fiscal_produto_ipi,vl_outras,,"numeric(15,2)",
+nota_fiscal_produto_ipi,vl_isento,,"numeric(15,2)",
+nota_fiscal_produto_ipi,created_at,,timestamp,Data de criação do registro
+nota_fiscal_produto_ipi,updated_at,,timestamp,Data da última atualização do registro
+nota_fiscal_produto_observacao,cd_nota_fiscal_produto,X,bigint,
+nota_fiscal_produto_observacao,cd_observacao,,integer,
+nota_fiscal_produto_observacao,created_at,,timestamp,Data de criação do registro
+nota_fiscal_produto_observacao,updated_at,,timestamp,Data da última atualização do registro
+nota_fiscal_produto_st_saida,cd_nota_fiscal_produto,X,bigint,
+nota_fiscal_produto_st_saida,vl_base,,"numeric(15,4)",
+nota_fiscal_produto_st_saida,vl_st,,"numeric(5,4)",
+nota_fiscal_produto_st_saida,vl_base_fcp,,"numeric(15,4)",
+nota_fiscal_produto_st_saida,pr_aliquota_fcp,,"numeric(15,2)",
+nota_fiscal_produto_st_saida,vl_fcp,,"numeric(15,4)",
+nota_fiscal_produto_st_saida,vl_icms_substituto,,"numeric(15,2)",
+nota_fiscal_produto_st_saida,created_at,,timestamp,Data de criação do registro
+nota_fiscal_produto_st_saida,updated_at,,timestamp,Data da última atualização do registro
+nota_fiscal_st,cd_nota_fiscal,,bigint,
+nota_fiscal_st,vl_base,,"numeric(15,2)",
+nota_fiscal_st,vl_icms_st,,"numeric(15,2)",
+nota_fiscal_st,vl_base_fcp,,"numeric(15,2)",
+nota_fiscal_st,vl_fcp,,"numeric(15,2)",
+nota_fiscal_st,created_at,,timestamp,Data de criação do registro
+nota_fiscal_st,updated_at,,timestamp,Data da última atualização do registro
+nota_fiscal_status_manifestacao_nfe,cd_nota_fiscal,X,bigint,
+nota_fiscal_status_manifestacao_nfe,cd_status_manifestacao_nfe,,integer,
+nota_fiscal_status_manifestacao_nfe,created_at,,timestamp,Data de criação do registro
+nota_fiscal_status_manifestacao_nfe,updated_at,,timestamp,Data da última atualização do registro
+nota_fiscal_status_nfe,cd_nota_fiscal,X,bigint,
+nota_fiscal_status_nfe,cd_status_nfe,,integer,
+nota_fiscal_status_nfe,dt_status,,timestamp,
+nota_fiscal_status_nfe,created_at,,timestamp,Data de criação do registro
+nota_fiscal_status_nfe,updated_at,,timestamp,Data da última atualização do registro
+nota_fiscal_valores,cd_nota_fiscal,X,bigint,
+nota_fiscal_valores,vl_total_dinheiro,,"numeric(15,2)",
+nota_fiscal_valores,vl_total_cheque,,"numeric(15,2)",
+nota_fiscal_valores,created_at,,timestamp,Data de criação do registro
+nota_fiscal_valores,updated_at,,timestamp,Data da última atualização do registro
+notificacao,cd_notificao,,integer,
+notificacao,cd_pessoa_usuario_remetente,,integer,
+notificacao,cd_pessoa_usuario_destinatario,,integer,
+notificacao,ds_titulo,,text,
+notificacao,ds_mensagem,,text,
+notificacao,dt_leitura,,timestamp,
+notificacao,dt_recebimento,,timestamp,
+notificacao,dt_envio,,timestamp,
+notificacao,id_aplicativo,,smallint,
+notificacao,created_at,,timestamp,Data de criação do registro
+notificacao,updated_at,,timestamp,Data da última atualização do registro
+notificacao,cd_regiao_venda,,integer,
+notificacao_token,cd_notificao_token,X,integer,
+notificacao_token,cd_pessoa_usuario,,integer,
+notificacao_token,id_aplicativo,,integer,
+notificacao_token,ds_token,,text,
+notificacao_token,created_at,,timestamp,Data de criação do registro
+notificacao_token,updated_at,,timestamp,Data da última atualização do registro
+objetivo_pedflex,cd_objetivo_pedflex,X,bigint,
+objetivo_pedflex,cd_pessoa_empresa,,integer,
+objetivo_pedflex,cd_pessoa_filial,,integer,
+objetivo_pedflex,cd_regiao_venda,,integer,
+objetivo_pedflex,dt_mes,,date,
+objetivo_pedflex,vl_objetivo_financeiro,,"numeric(15,4)",
+objetivo_pedflex,vl_resultado_financeiro,,"numeric(15,4)",
+objetivo_pedflex,qt_objetivo_positivacao,,integer,
+objetivo_pedflex,qt_resultado_positivacao,,integer,
+objetivo_pedflex,created_at,,timestamp,Data de criação do registro
+objetivo_pedflex,updated_at,,timestamp,Data da última atualização do registro
+observacao_fixa_nf,cd_observacao,X,integer,
+observacao_fixa_nf,cd_pessoa_filial,,integer,
+observacao_fixa_nf,nm_observacao,,text,
+observacao_fixa_nf,dt_inicio,,date,
+observacao_fixa_nf,dt_termino,,date,
+observacao_fixa_nf,created_at,,timestamp,Data de criação do registro
+observacao_fixa_nf,updated_at,,timestamp,Data da última atualização do registro
+observacao_nf,cd_observacao,X,integer,
+observacao_nf,nm_observacao,,text,
+observacao_nf,created_at,,timestamp,Data de criação do registro
+observacao_nf,updated_at,,timestamp,Data da última atualização do registro
+opcao_resposta,cd_opcao_resposta,X,integer,
+opcao_resposta,nm_opcao_resposta,,text,
+opcao_resposta,nr_ordem,,integer,
+opcao_resposta,created_at,,timestamp,Data de criação do registro
+opcao_resposta,updated_at,,timestamp,Data da última atualização do registro
+operacao_fiscal,cd_operacao_fiscal,X,integer,
+operacao_fiscal,nm_operacao_fiscal,,text,
+operacao_fiscal,id_tipo,,smallint,
+operacao_fiscal,id_sintegra,,smallint,
+operacao_fiscal,id_venda,,smallint,
+operacao_fiscal,id_entrada,,smallint,
+operacao_fiscal,id_custo,,smallint,
+operacao_fiscal,id_atualizacao_estoque,,smallint,
+operacao_fiscal,id_atualizacao_retorno,,smallint,
+operacao_fiscal,id_financeiro,,smallint,
+operacao_fiscal,id_nf,,smallint,
+operacao_fiscal,id_altera_preco,,smallint,
+operacao_fiscal,id_frete,,smallint,
+operacao_fiscal,id_comissao,,smallint,
+operacao_fiscal,id_ajuste_nfe,,smallint,
+operacao_fiscal,id_documento,,smallint,
+operacao_fiscal,created_at,,timestamp,Data de criação do registro
+operacao_fiscal,updated_at,,timestamp,Data da última atualização do registro
+oportunidade_cliente_produto,cd_oportunidade_cliente_produto,X,integer,
+oportunidade_cliente_produto,cd_visita_cliente,,integer,
+oportunidade_cliente_produto,dt_cadastro,,timestamp,
+oportunidade_cliente_produto,cd_produto,,bigint,
+oportunidade_cliente_produto,ds_observacao,,text,
+oportunidade_cliente_produto,created_at,,timestamp,Data de criação do registro
+oportunidade_cliente_produto,updated_at,,timestamp,Data da última atualização do registro
+pais,cd_pais,X,integer,
+pais,nm_pais,,text,
+pais,created_at,,timestamp,Data de criação do registro
+pais,updated_at,,timestamp,Data da última atualização do registro
+parametro_geral,cd_operacao_fiscal_venda,X,integer,
+parametro_geral,cd_operacao_fiscal_compra,,integer,
+parametro_geral,cd_operacao_fiscal_bonificacao,,integer,
+parametro_geral,cd_operacao_fiscal_devolucao,,integer,
+parametro_geral,cd_operacao_fiscal_estorno,,integer,
+parametro_geral,cd_operacao_fiscal_dev_fornecedor,,integer,
+parametro_geral,cd_operacao_fiscal_pronta_entrega,,integer,
+parametro_geral,cd_operacao_fiscal_remessa_manifesto,,integer,
+parametro_geral,cd_operacao_fiscal_retorno_manifesto,,integer,
+parametro_geral,cd_unidade_medida,,integer,
+parametro_geral,cd_desconto_empresa,,integer,
+parametro_geral,cd_desconto_fornecedor,,integer,
+parametro_geral,ds_imagem_logo,,text,
+parametro_geral,ds_imagem_bg_login,,text,
+parametro_geral,ds_imagem_card_login,,text,
+parametro_geral,ds_imagem_avatar,,text,
+parametro_geral,created_at,,timestamp,Data de criação do registro
+parametro_geral,updated_at,,timestamp,Data da última atualização do registro
+parametro_geral,pr_credito_imposto_federal,,"numeric(5,2)",
+parametro_geral,id_atualizacao_comissao,,smallint,
+parametro_geral,cd_integracao,,integer,
+parametro_geral,cd_desconto_flex,,integer,
+parametro_geral,cd_operacao_fiscal_retorno_vasilhame,,integer,
+parametro_geral,cd_operacao_fiscal_devolucao_vasilhame,,integer,
+parametro_geral,cd_operacao_fiscal_retorno_remessa_bonificacao,,integer,
+parametro_geral,cd_tipo_produto_imposto,,integer,
+parametro_geral,cd_desconto_escolha_certa,,integer,
+parametro_geral,cd_unidade_caixa_padrao,,integer,
+parametro_geral,cd_desconto_gerencial,,integer,
+parametro_geral,cd_desconto_combo,,integer,
+parametro_geral,ds_imagem_pedflex,,text,
+parametro_geral,nm_pedflex,,text,
+parametro_geral,ds_mapa_distribuicao,,text,
+parametro_geral,ds_email_atendimento,,text,
+parametro_geral,ds_horatio_atendimento,,text,
+parametro_geral,ds_link_facebook,,text,
+parametro_geral,ds_link_instagram,,text,
+parametro_geral,ds_link_linkedin,,text,
+parametro_geral,ds_site,,text,
+parametro_geral,nr_telefone_consultor,,text,
+parametro_geral,nr_central_atendimento,,text,
+parametro_geral,ds_caminho_banner_padrao,,text,
+parametro_geral,cd_desconto_gerencial_verba,,integer,
+parametro_geral,cd_acrescimo_verba,,integer,
+parametro_geral,cd_unidade_unidade_padrao,,integer,
+parametro_geral,cd_unidade_display_padrao,,integer,
+parametro_geral,vl_qualidade_foto,,integer,
+parametro_geral,vl_resolucao_foto,,integer,
+parametro_geral,id_valida_pedido_minimo,,smallint,
+parametro_geral,ds_senha_upvendas,,text,
+parametro_geral_empresa,cd_pessoa_empresa,X,integer,
+parametro_geral_empresa,id_ambiente,,smallint,
+parametro_geral_empresa,id_offline,,smallint,
+parametro_geral_empresa,ds_cert_passphrase,,text,
+parametro_geral_empresa,nm_cert_pem_file,,text,
+parametro_geral_empresa,nm_cert_p12_file,,text,
+parametro_geral_empresa,created_at,,timestamp,Data de criação do registro
+parametro_geral_empresa,updated_at,,timestamp,Data da última atualização do registro
+parametro_geral_empresa,id_markup,,smallint,
+parametro_geral_empresa,pr_de_padrao,,"numeric(5,2)",
+parametro_geral_filial,cd_pessoa_filial,X,integer,
+parametro_geral_filial,nr_ultima_nf_impressa,,bigint,
+parametro_geral_filial,ds_serie,,text,
+parametro_geral_filial,id_atualiza_armazem_saida,,smallint,
+parametro_geral_filial,cd_armazem_venda,,integer,
+parametro_geral_filial,cd_observacao_diferimento,,integer,
+parametro_geral_filial,id_divide_pedido,,smallint,
+parametro_geral_filial,nr_itens_pedido,,smallint,
+parametro_geral_filial,created_at,,timestamp,Data de criação do registro
+parametro_geral_filial,updated_at,,timestamp,Data da última atualização do registro
+parametro_geral_filial,id_imprime_observacao_st,,smallint,
+parametro_geral_filial,id_diferimento,,smallint,
+parametro_geral_filial,id_separa_pedido_vendedor,,integer,
+parametro_geral_filial,dt_entrada_contingencia,,integer,
+parametro_geral_filial,cd_motivo_contingencia,,timestamp,
+parametro_geral_filial,dt_ultima_nf_impressa,,integer,
+parametro_geral_filial,ds_titulo_pedflex,,date,
+parametro_geral_filial,ds_logo_pedflex,,text,
+parametro_geral_filial,nr_telefone_sac,,text,
+parametro_geral_filial,ds_email_contato,,text,
+parametro_geral_filial,ds_horario_atendimento,,text,
+parametro_geral_filial,ds_link_facebook,,text,
+parametro_geral_filial,ds_link_instagram,,text,
+parametro_geral_filial,ds_link_linkedin,,text,
+parametro_geral_filial,ds_link_site,,text,
+parametro_geral_filial,ds_contato_consultor_wpp,,text,
+parametro_geral_filial,ds_logo_distribuidora,,text,
+parametro_geral_filial,cd_situacao_pedido_cancelado,,integer,
+parametro_geral_filial,cd_situacao_pedido_faturado,,integer,
+parametro_geral_filial,cd_situacao_pedido_ag_retorno,,integer,
+parametro_geral_filial,cd_situacao_pedido_exportado,,integer,
+parametro_geral_filial,cd_integracao_salesforce,,integer,
+parametro_geral_filial,cd_situacao_pedido_upvendas,,integer,
+parametro_geral_filial,ds_link_base_pedflex,,text,
+parametro_geral_filial,id_split_pedido,,smallint,
+parametro_geral_filial,cd_regiao_venda_padrao_pedflex,,integer,
+parametro_geral_filial,cd_integracao_infracommerce_reppos,,integer,
+parametro_geral_filial,cd_regiao_venda_padrao_infracommerce,,integer,
+parametro_geral_filial,cd_atividade_padrao_infracommerce,,integer,
+parametro_geral_filial,cd_situacao_pedido_reppos,,integer,
+parametro_geral_filial,id_valida_limite_credito_pedflex,,smallint,
+parametro_geral_filial,cd_situacao_pedido_epedidos_polibras,,integer,
+parametro_geral_filial,qt_limite_pedidos_app,,integer,
+parametro_geral_filial,cd_negociacao_padrao_reppos,,integer,
+parametro_geral_ pedido_venda,cd_situacao_pedido_faturamento,X,integer,
+parametro_geral_ pedido_venda,cd_situacao_pedido_cancelamento_usuario,,integer,
+parametro_geral_ pedido_venda,cd_pedido_situacao_erro_nfe,,integer,
+parametro_geral_ pedido_venda,cd_situacao_pedido_integracao,,integer,
+parametro_geral_ pedido_venda,created_at,,timestamp,Data de criação do registro
+parametro_geral_ pedido_venda,updated_at,,timestamp,Data da última atualização do registro
+passo_visita,cd_passo_visita,X,integer,
+passo_visita,nm_passo_visita,,text,
+passo_visita,ds_passo_visita,,text,
+passo_visita,nr_integer,,integer,
+passo_visita,created_at,,timestamp,Data de criação do registro
+passo_visita,updated_at,,timestamp,Data da última atualização do registro
+passo_visita_executado,cd_passo_visita_executado,X,integer,
+passo_visita_executado,cd_visita_cliente,,integer,
+passo_visita_executado,cd_passo_visita,,integer,
+passo_visita_executado,id_realizado,,smallint,
+passo_visita_executado,ds_observacao,,text,
+passo_visita_executado,dt_referencia,,without time zone,
+passo_visita_executado,created_at,,timestamp,Data de criação do registro
+passo_visita_executado,updated_at,,timestamp,Data da última atualização do registro
+password_reset,email,,character varying (255),
+password_reset,token,,character varying (255),
+password_reset,created_at,,timestamp,Data de criação do registro
+pasta,cd_pasta,X,integer,
+pasta,nm_pasta,,character varying (255),
+pasta,pasta_pai,,integer,
+pasta,nr_ordem,,integer,
+pasta,ds_icone,,text,
+pasta,created_at,,timestamp,Data de criação do registro
+pasta,updated_at,,timestamp,Data da última atualização do registro
