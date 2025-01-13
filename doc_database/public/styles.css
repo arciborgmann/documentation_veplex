@@ -17,6 +17,29 @@ body {
     padding-bottom: 10px;
 }
 
+/* Estilos para o "X" de exclusão */
+.delete-button {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+}
+
+.table-header:hover .delete-button,
+.table-content td:hover .delete-button {
+    display: inline;
+}
+
+
+
+.table-content td {
+    position: relative;
+}
+
 /*------------------------------------------------------------*/
 /* Estilo do formulário */
 .upload-form {
@@ -308,7 +331,9 @@ input[type="text"] {
     padding: 5px;
     border-radius: 4px;
     margin: 5px 10px 5px 10px;
+    position: relative;
 }
+
 
 .table-header h2 {
     margin: 0;

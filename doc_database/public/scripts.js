@@ -200,3 +200,37 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// Função para deletar uma tabela
+function deleteTable(button, tabelaId) {
+    if (confirm('Tem certeza que deseja excluir esta tabela?')) {
+        // Realize a exclusão via AJAX ou redirecione para uma rota de exclusão
+        fetch(`/tabelas/${tabelaId}`, {
+            method: 'DELETE',
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            }
+        }).then(response => {
+            if (response.ok) {
+                button.closest('.table-header').remove();  // Remove a tabela do DOM
+                button.closest('.table-content').remove();
+            }
+        });
+    }
+}
+
+// Função para deletar um campo
+function deleteField(button, campoId) {
+    if (confirm('Tem certeza que deseja excluir este campo?')) {
+        // Realize a exclusão via AJAX ou redirecione para uma rota de exclusão
+        fetch(`/campos/${campoId}`, {
+            method: 'DELETE',
+            headers: {
+                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            }
+        }).then(response => {
+            if (response.ok) {
+                button.closest('tr').remove();  // Remove a linha do campo
+            }
+        });
+    }
+}
