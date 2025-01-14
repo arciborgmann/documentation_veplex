@@ -18,7 +18,7 @@ function toggleUpload() {
         uploadBlock.style.display = 'block';
         tableFormBlock.style.display = 'none';
         toggleButton.textContent = 'Fechar'; 
-        tableButton.textContent = 'Tabela';
+        //tableButton.textContent = 'Tabela';
     } else {
         uploadBlock.style.display = 'none';
         toggleButton.textContent = 'Arquivo'; // Atualiza o texto para "Arquivo"
@@ -38,7 +38,18 @@ function toggleTableForm() {
         toggleButton.textContent = 'Arquivo';
     } else {
         tableFormBlock.style.display = 'none';
-        tableButton.textContent = 'Tabela';
+        //tableButton.textContent = 'Tabela';
+    }
+}
+
+function toggleCheckbox(currentId, otherId) {
+    const currentCheckbox = document.getElementById(currentId);
+    const otherCheckbox = document.getElementById(otherId);
+    
+    // Desmarca o outro checkbox se o atual for selecionado
+    if (currentCheckbox.checked) {
+        otherCheckbox.checked = false;
+        filterTables();
     }
 }
 
@@ -216,21 +227,93 @@ function deleteTable(button, tabelaId) {
             }
         });
     }
+    filterTables();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Delegue eventos no contêiner que envolve a tabela
+    document.querySelector('.container').addEventListener('click', function (event) {
+        if (event.target.classList.contains('delete-button-field')) {
+            const button = event.target;
+            const fieldId = button.getAttribute('data-id');
+            deleteField(button, fieldId);
+        }
+    });
+});
+
+// Função para deletar uma tabela
+function deleteTable(button, tabelaId) {
+    if (confirm('Tem certeza que deseja excluir esta tabela?')) {
+        fetch(`/tabelas/${tabelaId}`, {
+            method: 'DELETE',
+            headers: {
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                'Accept': 'application/json',
+            },
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao excluir tabela.');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+                alert(data.message);
+                const header = button.closest('.table-header');
+                const content = header.nextElementSibling;
+                header.remove(); // Remove o cabeçalho
+                content.remove(); // Remove o conteúdo
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Erro ao excluir tabela:', error);
+            alert('Erro ao excluir tabela.');
+        });
+    }
+    filterTables();
 }
 
 // Função para deletar um campo
 function deleteField(button, campoId) {
     if (confirm('Tem certeza que deseja excluir este campo?')) {
-        // Realize a exclusão via AJAX ou redirecione para uma rota de exclusão
         fetch(`/campos/${campoId}`, {
             method: 'DELETE',
             headers: {
-                'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+                'Accept': 'application/json',
+            },
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erro ao excluir campo.');
             }
-        }).then(response => {
-            if (response.ok) {
-                button.closest('tr').remove();  // Remove a linha do campo
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+                alert(data.message);
+                button.closest('tr').remove(); // Remove a linha correspondente ao campo
+            } else {
+                alert(data.message);
             }
+        })
+        .catch(error => {
+            console.error('Erro ao excluir campo:', error);
+            alert('Erro ao excluir campo.');
         });
     }
 }
+
+function reinitializeEvents() {
+    document.querySelectorAll('.delete-button-field').forEach(button => {
+        button.addEventListener('click', function () {
+            const fieldId = this.getAttribute('data-id');
+            deleteField(this, fieldId);
+        });
+    });
+}
+
+reinitializeEvents();

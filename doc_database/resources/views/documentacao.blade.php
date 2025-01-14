@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Database Documentation</title>
     <link rel="stylesheet" href="{{ asset('styles.css') }}">
 </head>
@@ -81,11 +82,11 @@
         </div>
         <div class="checkbox-container">
             <div class="checkbox-item">
-                <input type="checkbox" id="tabelas" onchange="filterTables()">
+                <input type="checkbox" id="tabelas" onchange="toggleCheckbox('tabelas', 'campos')">
                 <label for="tabelas">Tabelas</label>
             </div>
             <div class="checkbox-item">
-                <input type="checkbox" id="campos" onchange="filterTables()">
+                <input type="checkbox" id="campos" onchange="toggleCheckbox('campos', 'tabelas')">
                 <label for="campos">Campos</label>
             </div>
         </div>
@@ -96,6 +97,7 @@
             <div class="table-header" onclick="toggleContent('tabela-{{ $tabela->id }}')">
                 <h2>{{ $tabela->nome }}</h2>
                 <span>▼</span>
+                <button class="delete-button" onclick="deleteTable(this, '{{ $tabela->id }}')">Excluir</button>
             </div>
             <div id="tabela-{{ $tabela->id }}" class="table-content" data-type="tabela">
                 <p class="description">{{ $tabela->descricao }}</p>
@@ -114,7 +116,10 @@
                                 <td>{{ $campo->nome }}</td>
                                 <td class="pkey">{{ $campo->is_primary_key ? 'X' : '' }}</td>
                                 <td>{{ $campo->tipo }}</td>
-                                <td>{{ $campo->descricao }}</td>
+                                <td>
+                                    {{ $campo->descricao }}
+                                    <button class="delete-button-field" data-id="{{ $campo->id }}">Excluir</button>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

@@ -22,19 +22,35 @@ body {
     display: none;
     position: absolute;
     top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #9b59b6;
+    font-weight: bold;
+    background: none;
+    border: none;
+}
+
+/* Estilos para o "X" de exclusão */
+.delete-button-field {
+    display: none;
+    position: absolute;
+    top: 55%;
     right: 10px;
     transform: translateY(-50%);
     cursor: pointer;
-    color: red;
+    color: #1a441a;
     font-weight: bold;
+    background: none;
+    border: none;
 }
 
 .table-header:hover .delete-button,
-.table-content td:hover .delete-button {
+.table-content td:hover .delete-button 
+.table-header:hover .delete-button-field,
+.table-content td:hover .delete-button-field {
     display: inline;
 }
-
-
 
 .table-content td {
     position: relative;
@@ -380,8 +396,8 @@ table th, table td {
 }
 
 table th {
-    background-color: #1a441a;
-    color: #ffffff;
+    background-color: #AECA0E;
+    color: #0f0f0f;
 }
 
 /* Contêiner que envolve os checkboxes */
