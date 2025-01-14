@@ -1,0 +1,16 @@
+Tabela,Campo,PK,Tipo,Descrição
+Acordo_Comercial,cd_acordo_comercial,X,integer,
+Acordo_Comercial,dt_inicio,,date,
+Acordo_Comercial,dt_termino,,date,
+Acordo_Comercial,cd_pessoa_cliente,,integer,
+Acordo_Comercial,cd_pessoa_usuario,,integer,
+Acordo_Comercial,dt_geracao,,date,
+Acordo_Comercial,vl_acordo,,"numeric(15,2)",
+Acordo_Comercial,ds_observacao,,text,
+Acordo_Comercial,nr_acordo,,integer,
+Acordo_Comercial,dt_base,,date,
+Acordo_Comercial,cd_documento_firmar_digital,,integer,
+Acordo_Comercial,id_status_assinatura,,smallint,
+Acordo_Comercial,cd_proposta_acordo_comercial,,integer,
+Acordo_Comercial,created_at,,timestamp,Data de criação do registro
+Acordo_Comercial,updated_at,,timestamp,Data da última atualização do registro

@@ -1,0 +1,323 @@
+Tabela,Campo,PK,Tipo,Descrição
+ponto_extra_aprovacao,cd_ponto_extra,X,integer,
+ponto_extra_aprovacao,cd_metrica,X,integer,
+ponto_extra_aprovacao,id_valida,,smallint,
+ponto_extra_aprovacao,dt_validacao,,timestamp,
+ponto_extra_aprovacao,ds_observacao,,text,
+ponto_extra_aprovacao,cd_pessoa_usuario,,integer,
+ponto_extra_aprovacao,created_at,,timestamp,Data de criação do registro
+ponto_extra_aprovacao,updated_at,,timestamp,Data da última atualização do registro
+ponto_extra_foto,cd_ponto_extra_foto,X,integer,
+ponto_extra_foto,cd_ponto_extra,X,integer,
+ponto_extra_foto,ds_caminho,,text,
+ponto_extra_foto,nr_latitude,,"numeric(8,6)",
+ponto_extra_foto,nr_longitude,,"numeric(8,6)",
+ponto_extra_foto,dt_foto,,timestamp,
+ponto_extra_foto,created_at,,timestamp,Data de criação do registro
+ponto_extra_foto,updated_at,,timestamp,Data da última atualização do registro
+ponto_extra_grupo_produto,cd_ponto_extra,X,integer,
+ponto_extra_grupo_produto,cd_ponto_produto,X,integer,
+ponto_extra_grupo_produto,created_at,,timestamp,Data de criação do registro
+ponto_extra_grupo_produto,updated_at,,timestamp,Data da última atualização do registro
+ponto_extra_produto,cd_ponto_extra,X,integer,
+ponto_extra_produto,cd_produto,X,integer,
+ponto_extra_produto,created_at,,timestamp,Data de criação do registro
+ponto_extra_produto,updated_at,,timestamp,Data da última atualização do registro
+portador,cd_portador,X,integer,
+portador,nm_portador,,text,
+portador,cd_conta_bancaria,,integer,
+portador,nr_sequencia_boleto,,bigint,
+portador,nr_sequencia_limite,,bigint,
+portador,created_at,,timestamp,Data de criação do registro
+portador,updated_at,,timestamp,Data da última atualização do registro
+portador,cd_portador,X,integer,
+portador,nm_portador,,text,
+portador,cd_conta_bancaria,,integer,
+portador,nr_sequencia_boleto,,bigint,
+portador,nr_sequencia_limite,,bigint,
+portador,created_at,,timestamp,Data de criação do registro
+portador,updated_at,,timestamp,Data da última atualização do registro
+produto,cd_produto,,bigint,
+produto,cd_pessoa_filial,,text,
+produto,dt_vigencia,,integer,
+produto,pr_comissao,,integer,
+produto,created_at,,timestamp,Data de criação do registro
+produto,updated_at,,timestamp,Data da última atualização do registro
+produto,cd_tipo_regiao_venda,,integer,
+produto,cd_referencia_externa,,smallint,
+produto,cd_produto_comissao,X,smallint,
+produto_comissao,cd_produto,,bigint,
+produto_comissao,cd_pessoa_filial,,integer,
+produto_comissao,dt_vigencia,,date,
+produto_comissao,pr_comissao,,"numeric(5,2)",
+produto_comissao,created_at,,timestamp,Data de criação do registro
+produto_comissao,updated_at,,timestamp,Data da última atualização do registro
+produto_comissao,cd_tipo_regiao_venda,,integer,
+produto_comissao,cd_referencia_externa,,text,
+produto_comissao,cd_produto,X,integer,
+produto_cota,cd_produto_cota,X,integer,
+produto_cota,cd_produto,,bigint,
+produto_cota,qt_cota,,integer,
+produto_cota,cd_pessoa_cliente,,integer,
+produto_cota,cd_atividade,,integer,
+produto_cota,created_at,,timestamp,Data de criação do registro
+produto_cota,updated_at,,timestamp,Data da última atualização do registro
+produto_desconto,cd_produto,X,bigint,
+produto_desconto,cd_desconto,X,integer,
+produto_desconto,dt_inicio_vigencia,,date,
+produto_desconto,dt_final_vigencia,,date,
+produto_desconto,pr_desconto,,"numeric(5,2)",
+produto_desconto,produto_desconto,X,integer,
+produto_desconto,created_at,,timestamp,Data de criação do registro
+produto_desconto,updated_at,,timestamp,Data da última atualização do registro
+produto_filial_parametro,cd_produto,X,bigint,
+produto_filial_parametro,cd_pessoa_filial,X,integer,
+produto_filial_parametro,qt_multiplo,,integer,
+produto_filial_parametro,qt_venda_minima,,integer,
+produto_filial_parametro,created_at,,timestamp,Data de criação do registro
+produto_filial_parametro,updated_at,,timestamp,Data da última atualização do registro
+produto_filial_parametro,cd_produto,X,bigint,
+produto_filial_parametro,cd_pessoa_filial,X,integer,
+produto_filial_parametro,qt_multiplo,,integer,
+produto_filial_parametro,qt_venda_minima,,integer,
+produto_filial_parametro,created_at,,timestamp,Data de criação do registro
+produto_filial_parametro,updated_at,,timestamp,Data da última atualização do registro
+produto_fornecedor,cd_produto,X,bigint,
+produto_fornecedor,cd_pessoa,,integer,
+produto_fornecedor,created_at,,timestamp,Data de criação do registro
+produto_fornecedor,updated_at,,timestamp,Data da última atualização do registro
+produto_icms,cd_produto_icms,X,integer,
+produto_icms,cd_produto,,bigint,
+produto_icms,nr_csta,,text,
+produto_icms,nr_cstb,,text,
+produto_icms,dt_vigencia,,date,
+produto_icms,cd_uf_origem,,integer,
+produto_icms,cd_uf_destino,,integer,
+produto_icms,pr_base,,"numeric(15,5)",
+produto_icms,pr_aliquota,,"numeric(15,5)",
+produto_icms,pr_isento,,"numeric(15,5)",
+produto_icms,pr_outras,,"numeric(15,5)",
+produto_icms,pr_diferimento,,"numeric(15,5)",
+produto_icms,pr_reducao,,"numeric(15,5)",
+produto_icms,created_at,,timestamp,Data de criação do registro
+produto_icms,updated_at,,timestamp,Data da última atualização do registro
+produto_icms,nr_cfop,,integer,
+produto_icms,nr_cstb_sem_diferimento,,text,
+produto_icms,cd_codigo_ajuste_fiscal,,integer,
+produto_icms,cd_observacao,,integer,
+produto_icms,pr_base_fcp,,"numeric(15,5)",
+produto_icms,pr_aliquota_fcp,,"numeric(15,5)",
+produto_icms,pr_aliquota_fornecedor,,"numeric(15,2)",
+produto_icms,vl_pauta,,"numeric(15,2)",
+produto_icms,id_convenio,,smallint,
+produto_icms,pr_base_st,,"numeric(15,5)",
+produto_icms,pr_aliquota_interna,,"numeric(15,5)",
+produto_imagem,cd_produto_imagem,X,integer,
+produto_imagem,cd_produto,,bigint,
+produto_imagem,ds_imagem,,text,
+produto_imagem,nr_odem,,integer,
+produto_imagem,created_at,,timestamp,Data de criação do registro
+produto_imagem,updated_at,,timestamp,Data da última atualização do registro
+produto_imagem,id_tipo_imagem,,smallint,
+produto_imposto_federal,cd_produto_imposto_federal,X,integer,
+produto_imposto_federal,cd_produto,,bigint,
+produto_imposto_federal,id_tributacao,,smallint,
+produto_imposto_federal,dt_vigencia,,date,
+produto_imposto_federal,pr_pis,,"numeric(15,5)",
+produto_imposto_federal,pr_cofins,,"numeric(15,5)",
+produto_imposto_federal,pr_pis_debito,,"numeric(15,5)",
+produto_imposto_federal,pr_cofins_debito,,"numeric(15,5)",
+produto_imposto_federal,created_at,,timestamp,Data de criação do registro
+produto_imposto_federal,updated_at,,timestamp,Data da última atualização do registro
+produto_imposto_federal_atividade,cd_produto,X,bigint,
+produto_imposto_federal_atividade,cd_atividade,X,integer,
+produto_imposto_federal_atividade,dt_vigencia,X,date,
+produto_imposto_federal_atividade,pr_pis,,"numeric(15,2)",
+produto_imposto_federal_atividade,pr_cofins,,"numeric(15,2)",
+produto_imposto_federal_atividade,created_at,,timestamp,Data de criação do registro
+produto_imposto_federal_atividade,updated_at,,timestamp,Data da última atualização do registro
+produto_indexador,cd_produto_indexador,X,integer,
+produto_indexador,cd_produto,,bigint,
+produto_indexador,cd_pessoa_filial,X,integer,
+produto_indexador,dt_vigencia,,date,
+produto_indexador,vl_indice_preco,,"numeric(15,4)",
+produto_indexador,nr_ordem_calculo,,integer,
+produto_indexador,cd_atividade,,integer,
+produto_indexador,cd_unidade_medida,,integer,
+produto_indexador,cd_pessoa_cliente,,integer,
+produto_indexador,ds_observacao,,text,
+produto_indexador,created_at,,timestamp,Data de criação do registro
+produto_indexador,updated_at,,timestamp,Data da última atualização do registro
+produto_indexador,cd_referencia_externa,,text,
+produto_indexador,cd_produto_indexador,X,integer,
+produto_indexador,cd_produto,,bigint,
+produto_indexador,cd_pessoa_filial,,integer,
+produto_indexador,dt_vigencia,,date,
+produto_indexador,vl_indice_preco,,"numeric(15,4)",
+produto_indexador,nr_ordem_calculo,,integer,
+produto_indexador,cd_atividade,,integer,
+produto_indexador,cd_unidade_medida,,integer,
+produto_indexador,cd_pessoa_cliente,,integer,
+produto_indexador,ds_observacao,,text,
+produto_indexador,created_at,,timestamp,Data de criação do registro
+produto_indexador,updated_at,,timestamp,Data da última atualização do registro
+produto_indexador,cd_referencia_externa,,text,
+produto_insercao_automatica,cd_produto,X,bigint,
+produto_insercao_automatica,cd_unidade_medida,,integer,
+produto_insercao_automatica,qt_produto,,integer,
+produto_insercao_automatica,created_at,,timestamp,Data de criação do registro
+produto_insercao_automatica,updated_at,,timestamp,Data da última atualização do registro
+produto_ipi,cd_produto,X,bigint,
+produto_ipi,dt_vigencia,X,date,
+produto_ipi,pr_base,,"numeric(15,5)",
+produto_ipi,pr_aliquota,,"numeric(15,5)",
+produto_ipi,pr_isento,,"numeric(15,5)",
+produto_ipi,pr_outras,,"numeric(15,5)",
+produto_ipi,created_at,,timestamp,Data de criação do registro
+produto_ipi,updated_at,,timestamp,Data da última atualização do registro
+produto_ipi,vl_ipi_caixa,,"numeric(15,5)",
+produto_ipi_pauta,cd_produto_ipi_pauta,X,integer,
+produto_ipi_pauta,cd_produto,,bigint,
+produto_ipi_pauta,dt_vigencia_inicial,,date,
+produto_ipi_pauta,dt_vigencia_final,,date,
+produto_ipi_pauta,cd_pessoa_filial,,integer,
+produto_ipi_pauta,cd_uf_origem,,integer,
+produto_ipi_pauta,cd_uf_destino,,integer,
+produto_ipi_pauta,vl_pauta,,"numeric(15,5)",
+produto_ipi_pauta,created_at,,timestamp,Data de criação do registro
+produto_ipi_pauta,updated_at,,timestamp,Data da última atualização do registro
+produto_margem,cd_produto,X,bigint,
+produto_margem,cd_pessoa_filial,X,integer,
+produto_margem,dt_vigencia,X,date,
+produto_margem,pr_margem,,"numeric(15,2)",
+produto_margem,created_at,,timestamp,Data de criação do registro
+produto_margem,updated_at,,timestamp,Data da última atualização do registro
+produto_preco_custo,cd_produto,X,bigint,
+produto_preco_custo,cd_pessoa_filial,X,integer,
+produto_preco_custo,dt_vigencia,X,date,
+produto_preco_custo,vl_preco,,"numeric(15,4)",
+produto_preco_custo,vl_preco_custo_medio,,"numeric(15,4)",
+produto_preco_custo,created_at,,timestamp,Data de criação do registro
+produto_preco_custo,updated_at,,timestamp,Data da última atualização do registro
+produto_preco_limite,cd_produto,X,bigint,
+produto_preco_limite,cd_pessoa_filial,X,integer,
+produto_preco_limite,dt_vigencia,X,date,
+produto_preco_limite,pr_desconto_maximo,,"numeric(15,2)",
+produto_preco_limite,pr_acrescimo_maximo,,"numeric(15,2)",
+produto_preco_limite,created_at,,timestamp,Data de criação do registro
+produto_preco_limite,updated_at,,timestamp,Data da última atualização do registro
+produto_preco_pauta,cd_produto,X,bigint,
+produto_preco_pauta,cd_pessoa_filial,X,integer,
+produto_preco_pauta,dt_vigencia_inicio,X,date,
+produto_preco_pauta,dt_vigencia_final,,"numeric(15,2)",
+produto_preco_pauta,vl_pauta,,"numeric(15,2)",
+produto_preco_pauta,cd_uf_origem,X,integer,
+produto_preco_pauta,cd_uf_destino,X,integer,
+produto_preco_pauta,created_at,,timestamp,Data de criação do registro
+produto_preco_pauta,updated_at,,timestamp,Data da última atualização do registro
+produto_preco_reposicao,cd_produto,X,bigint,
+produto_preco_reposicao,cd_pessoa_filial,X,integer,
+produto_preco_reposicao,dt_vigencia,X,date,
+produto_preco_reposicao,vl_preco,,"numeric(15,4)",
+produto_preco_reposicao,created_at,,timestamp,Data de criação do registro
+produto_preco_reposicao,updated_at,,timestamp,Data da última atualização do registro
+produto_preco_venda,cd_produto_preco_venda,X,integer,
+produto_preco_venda,cd_produto,,bigint,
+produto_preco_venda,cd_pessoa_filial,,integer,
+produto_preco_venda,dt_vigencia,,date,
+produto_preco_venda,vl_preco,,"numeric(15,2)",
+produto_preco_venda,created_at,,timestamp,Data de criação do registro
+produto_preco_venda,updated_at,,timestamp,Data da última atualização do registro
+produto_preco_venda_aprovacao,cd_produto,X,bigint,
+produto_preco_venda_aprovacao,cd_pessoa_filial,X,integer,
+produto_preco_venda_aprovacao,dt_vigencia,X,date,
+produto_preco_venda_aprovacao,cd_pessoa_usuario_lancamento,,integer,
+produto_preco_venda_aprovacao,vl_preco,,"numeric(15,2)",
+produto_preco_venda_aprovacao,dt_aprovacao,,date,
+produto_preco_venda_aprovacao,cd_pessoa_usuario_aprovacao,,integer,
+produto_preco_venda_aprovacao,id_base_preco,,smallint,
+produto_preco_venda_aprovacao,pr_diferenca_maxima,,"numeric(5,2)",
+produto_preco_venda_aprovacao,created_at,,timestamp,Data de criação do registro
+produto_preco_venda_aprovacao,updated_at,,timestamp,Data da última atualização do registro
+produto_preco_venda_aprovacao,cd_uf_destino,X,integer,
+produto_restricao_venda,cd_produto_restricao_venda,X,integer,
+produto_restricao_venda,cd_produto,X,bigint,
+produto_restricao_venda,cd_regiao_venda,X,integer,
+produto_restricao_venda,cd_atividade,,integer,
+produto_restricao_venda,cd_pessoa_cliente,,integer,
+produto_restricao_venda,created_at,,timestamp,Data de criação do registro
+produto_restricao_venda,updated_at,,timestamp,Data da última atualização do registro
+produto_secao_oniz,cd_secao_loja,,integer,
+produto_secao_oniz,ds_codigo,,text,
+produto_unidade,cd_unidade_medida,X,integer,
+produto_unidade,cd_produto,X,bigint,
+produto_unidade,ds_codigo,X,text,
+produto_unidade,qt_produto,,integer,
+produto_unidade,qt_produto_fornecedor,,integer,
+produto_unidade,qt_minima,,integer,
+produto_unidade,id_tipo,,smallint,
+produto_unidade,id_principal,,smallint,
+produto_unidade,id_exporta_fornecedor,,smallint,
+produto_unidade,ds_unidade,,text,
+produto_unidade,id_utilizacao,,smallint,
+produto_unidade,id_montagem,,smallint,
+produto_unidade,vl_peso,,"numeric(15,3)",
+produto_unidade,vl_largura,,"numeric(15,2)",
+produto_unidade,vl_altura,,"numeric(15,2)",
+produto_unidade,vl_comprimento,,"numeric(15,2)",
+produto_unidade,created_at,,timestamp,Data de criação do registro
+produto_unidade,updated_at,,timestamp,Data da última atualização do registro
+produto_unidade,cd_referencia_externa,,text,
+produto_unidade,id_excluir,,smallint,
+produto_unidade,id_bloqueado_venda_avulsa,,smallint,
+produto_verba_investimento,cd_produto,X,integer,
+produto_verba_investimento,cd_pessoa_filial,X,bigint,
+produto_verba_investimento,dt_vigencia,X,date,
+produto_verba_investimento,id_tipo,X,smallint,
+produto_verba_investimento,pr_verba_investimento,,"numeric(15,2)",
+produto_verba_investimento,vl_verba_investimento,,"numeric(15,2)",
+produto_verba_investimento,created_at,,timestamp,Data de criação do registro
+produto_verba_investimento,updated_at,,timestamp,Data da última atualização do registro
+proposta_acordo_comercial,proposta_acordo_comercial,X,integer,
+proposta_acordo_comercial,dt_inicio,,date,
+proposta_acordo_comercial,cd_termino,,date,
+proposta_acordo_comercial,cd_tipo_proposta,,integer,
+proposta_acordo_comercial,cd_pessoa_cliente,,integer,
+proposta_acordo_comercial,cd_rede,,integer,
+proposta_acordo_comercial,cd_marca,,integer,
+proposta_acordo_comercial,pr_reembolso,,"numeric(15,2)",
+proposta_acordo_comercial,cd_regiao_venda,,integer,
+proposta_acordo_comercial,dt_proposta,,date,
+proposta_acordo_comercial,vl_estimado,,"numeric(15,2)",
+proposta_acordo_comercial,id_status,,smallint,
+proposta_acordo_comercial,id_status_assinatura,,smallint,
+proposta_acordo_comercial,created_at,,timestamp,Data de criação do registro
+proposta_acordo_comercial,updated_at,,timestamp,Data da última atualização do registro
+proposta_acordo_comercial,cd_proposta_acorda_comercial_anexo,X,integer,
+proposta_acordo_comercial,cd_proposta_acordo_comercial,,integer,
+proposta_acordo_comercial,cd_pessoa_usuario,,integer,
+proposta_acordo_comercial,cd_pessoa_usuario,,integer,
+proposta_acordo_comercial,ds_anexo,,text,
+proposta_acordo_comercial,ds_caminho_anexo,,text,
+proposta_acordo_comercial,id_tipo,,smallint,
+proposta_acordo_comercial,id_validado,,smallint,
+proposta_acordo_comercial,created_at,,timestamp,Data de criação do registro
+proposta_acordo_comercial,updated_at,,timestamp,Data da última atualização do registro
+proposta_acordo_comercial_anexo,cd_proposta_acorda_comercial_anexo,X,integer,
+proposta_acordo_comercial_anexo,cd_proposta_acordo_comercial,,integer,
+proposta_acordo_comercial_anexo,cd_pessoa_usuario,,integer,
+proposta_acordo_comercial_anexo,cd_pessoa_usuario,,integer,
+proposta_acordo_comercial_anexo,ds_anexo,,text,
+proposta_acordo_comercial_anexo,ds_caminho_anexo,,text,
+proposta_acordo_comercial_anexo,id_tipo,,smallint,
+proposta_acordo_comercial_anexo,id_validado,,smallint,
+proposta_acordo_comercial_anexo,created_at,,timestamp,Data de criação do registro
+proposta_acordo_comercial_anexo,updated_at,,timestamp,Data da última atualização do registro
+proposta_acordo_comercial_contrato,cd_proposta_acordo_comercial_contrato,X,integer,
+proposta_acordo_comercial_contrato,cd_proposta_acordo_comercial,,integer,
+proposta_acordo_comercial_contrato,cd_pessoa_usuario,,integer,
+proposta_acordo_comercial_contrato,dt_geracao,,date,
+proposta_acordo_comercial_contrato,ds_proposta_contrato,,text,
+proposta_acordo_comercial_contrato,ds_caminho_contrato_assinado,,text,
+proposta_acordo_comercial_contrato,created_at,,timestamp,Data de criação do registro
+proposta_acordo_comercial_contrato,updated_at,,timestamp,Data da última atualização do registro

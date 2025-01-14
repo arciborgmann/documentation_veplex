@@ -1,0 +1,288 @@
+Tabela,Campo,PK,Tipo,Descrição
+proposta_acordo_comercial_grupo_produto,cd_proposta_acordo_comercial,X,integer,
+proposta_acordo_comercial_grupo_produto,cd_grupo_produto,X,integer,
+proposta_acordo_comercial_grupo_produto,created_at,,timestamp,Data de criação do registro
+proposta_acordo_comercial_grupo_produto,updated_at,,timestamp,Data da última atualização do registro
+proposta_acordo_comercial_mecanica,cd_proposta_acordo_comercial,X,integer,
+proposta_acordo_comercial_mecanica,cd_mecanica_proposta,X,integer,
+proposta_acordo_comercial_mecanica,vl_negociado,,"numeric(15,2)",
+proposta_acordo_comercial_mecanica,vl_realizado,,"numeric(15,2)",
+proposta_acordo_comercial_mecanica,id_comprovado,,smallint,
+proposta_acordo_comercial_mecanica,created_at,,timestamp,Data de criação do registro
+proposta_acordo_comercial_mecanica,updated_at,,timestamp,Data da última atualização do registro
+proposta_acordo_comercial_produto,cd_proposta_acordo_comercial,X,integer,
+proposta_acordo_comercial_produto,cd_produto,X,integer,
+proposta_acordo_comercial_produto,created_at,,timestamp,Data de criação do registro
+proposta_acordo_comercial_produto,updated_at,,timestamp,Data da última atualização do registro
+proposta_acordo_comercial_produto,cd_proposta_acordo_comercial,X,integer,
+proposta_acordo_comercial_produto,cd_produto,X,integer,
+proposta_acordo_comercial_produto,created_at,,timestamp,Data de criação do registro
+proposta_acordo_comercial_produto,updated_at,,timestamp,Data da última atualização do registro
+proposta_acordo_comercial_signatario,cd_proposta_acordo_comercial,X,integer,
+proposta_acordo_comercial_signatario,cd_signatario,X,integer,
+proposta_acordo_comercial_signatario,id_tipo,,smallint,
+proposta_acordo_comercial_signatario,nr_ordem,,smallint,
+proposta_acordo_comercial_signatario,dt_envio,,timestamp,
+proposta_acordo_comercial_signatario,dt_envio,,timestamp,
+proposta_acordo_comercial_signatario,dt_visualizacao,,timestamp,
+proposta_acordo_comercial_signatario,dt_assinatura,,timestamp,
+proposta_acordo_comercial_signatario,nr_latitude,,"numeric(8,6)",
+proposta_acordo_comercial_signatario,nr_longitude,,"numeric(8,6)",
+proposta_acordo_comercial_signatario,nm_pessoa_assinatura,,text,
+proposta_acordo_comercial_signatario,nr_cpf_pessoa_assinatura,,text,
+proposta_acordo_comercial_signatario,dt_nascimento_pessoa_assinatura,,date,
+proposta_acordo_comercial_signatario,nr_ip_assinatura,,text,
+proposta_acordo_comercial_signatario,ds_navegador_assinatura,,text,
+proposta_acordo_comercial_signatario,created_at,,timestamp,Data de criação do registro
+proposta_acordo_comercial_signatario,updated_at,,timestamp,Data da última atualização do registro
+proposta_acordo_comercial_validacao,cd_proposta_acordo_comercial_validacao,X,integer,
+proposta_acordo_comercial_validacao,cd_proposta_acordo_comercial,,integer,
+proposta_acordo_comercial_validacao,id_validacao,,smallint,
+proposta_acordo_comercial_validacao,dt_validacao,,timestamp,
+proposta_acordo_comercial_validacao,cd_pessoa_usuario,,integer,
+proposta_acordo_comercial_validacao,ds_observacao,,text,
+proposta_acordo_comercial_validacao,created_at,,timestamp,Data de criação do registro
+proposta_acordo_comercial_validacao,updated_at,,timestamp,Data da última atualização do registro
+reabastecimento_visita,cd_reabastecimento_visita,X,integer,
+reabastecimento_visita,cd_visita_cliente,,integer,
+reabastecimento_visita,cd_produto,,bigint,
+reabastecimento_visita,qt_solicitada,,integer,
+reabastecimento_visita,dt_solicitada,,timestamp,
+reabastecimento_visita,qt_separada,,integer,
+reabastecimento_visita,dt_separada,,timestamp,
+reabastecimento_visita,created_at,,timestamp,Data de criação do registro
+reabastecimento_visita,updated_at,,timestamp,Data da última atualização do registro
+reabastecimento_visita,cd_categoria_foto,,integer,
+rede,cd_rede,X,integer,
+rede,nm_rede,,text,
+rede,created_at,,timestamp,Data de criação do registro
+rede,updated_at,,timestamp,Data da última atualização do registro
+rede_cliente,cd_rede,X,integer,
+rede_cliente,cd_pessoa_cliente,X,integer,
+rede_cliente,created_at,,timestamp,Data de criação do registro
+rede_cliente,updated_at,,timestamp,Data da última atualização do registro
+rede_preco,cd_rede,X,integer,
+rede_preco,cd_produto,X,integer,
+rede_preco,vl_preco,,"numeric(15,3)",
+rede_preco,created_at,,timestamp,Data de criação do registro
+rede_preco,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda,cd_regiao_venda,X,integer,
+regiao_venda,nm_regiao_venda,,text,
+regiao_venda,cd_regiao_venda_superior,,integer,
+regiao_venda,vl_pedido_minimo,,"numeric(15,2)",
+regiao_venda,id_segue_roteiro,,smallint,
+regiao_venda,id_visita_fora_planejamento,,smallint,
+regiao_venda,id_compara_coordenada_cliente,,smallint,
+regiao_venda,qt_distancia_raio,,integer,
+regiao_venda,id_tipo_regiao,,smallint,
+regiao_venda,dt_ultima_sincronizacao,,timestamp,
+regiao_venda,pr_bateria,,"numeric(15,2)",
+regiao_venda,id_ativo_pedflex,,smallint,
+regiao_venda,created_at,,timestamp,Data de criação do registro
+regiao_venda,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda,id_venda,,smallint,
+regiao_venda,qt_minutos_localizacao_background,,integer,
+regiao_venda,cd_referencia_externa,,text,
+regiao_venda,id_compara_coordenada_cliente_checkout,,smallint,
+regiao_venda,qt_foto_perfeita_obrigatoria,,integer,
+regiao_venda,id_ativo_upvendas,,smallint,
+regiao_venda,id_deslogar,,smallint,
+regiao_venda,cd_referencia_externa_erp,,text,
+regiao_venda,id_gondolas,,smallint,
+regiao_venda,id_sincronizacao_automatica,,smallint,
+regiao_venda_associada,cd_regiao_venda,X,integer,
+regiao_venda_associada,cd_regiao_venda_associada,X,integer,
+regiao_venda_associada,created_at,,timestamp,Data de criação do registro
+regiao_venda_associada,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_bloqueado,cd_regiao_venda_bloqueado,X,integer,
+regiao_venda_bloqueado,cd_regiao_venda,,integer,
+regiao_venda_bloqueada,ds_motivo,,text,
+regiao_venda_bloqueado,dt_inicio,,date,
+regiao_venda_bloqueado,dt_fim,,date,
+regiao_venda_bloqueado,cd_usuario,,integer,
+regiao_venda_bloqueado,created_at,,timestamp,Data de criação do registro
+regiao_venda_bloqueado,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_cliente,cd_regiao_venda_cliente,X,integer,
+regiao_venda_cliente,cd_regiao_venda,,integer,
+regiao_venda_cliente,cd_pessoa,,integer,
+regiao_venda_cliente,cd_grupo_produto,,integer,
+regiao_venda_cliente,created_at,,timestamp,Data de criação do registro
+regiao_venda_cliente,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_cliente,cd_fabricante,,bigint,
+regiao_venda_cliente,cd_marca,,integer,
+regiao_venda_cliente,cd_produto,,bigint,
+regiao_venda_cliente,cd_referencia_externa_carteira,,text,
+regiao_venda_cliente_controle,cd_regiao_venda,X,integer,
+regiao_venda_cliente_controle,cd_pessoa,X,integer,
+regiao_venda_cliente_controle,cd_referencia_externa_carteira,X,text,
+regiao_venda_cliente_controle,cd_referencia_externa_item,X,text,
+regiao_venda_cliente_controle,cd_fabricante,X,bigint,
+regiao_venda_cliente_controle,created_at,,timestamp,Data de criação do registro
+regiao_venda_cliente_controle,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_cliente_controle,cd_regiao_venda_cliente,,integer,
+regiao_venda_cliente_controle,cd_regiao_venda,,integer,
+regiao_venda_cliente_controle,cd_pessoa,,integer,
+regiao_venda_cliente_controle,cd_grupo_produto,,integer,
+regiao_venda_cliente_controle,created_at,,timestamp,Data de criação do registro
+regiao_venda_cliente_controle,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_cliente_controle,cd_fabricante,,bigint,
+regiao_venda_cliente_controle,cd_marca,,integer,
+regiao_venda_cliente_controle,cd_produto,,bigint,
+regiao_venda_cliente_controle,cd_referencia_externa,,text,
+regiao_venda_cliente_controle,cd_regiao_venda_cliente,,integer,
+regiao_venda_cliente_controle,cd_regiao_venda,,integer,
+regiao_venda_cliente_controle,cd_pessoa,,integer,
+regiao_venda_cliente_controle,cd_grupo_produto,,integer,
+regiao_venda_cliente_controle,created_at,,timestamp,Data de criação do registro
+regiao_venda_cliente_controle,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_cliente_controle,cd_fabricante,,bigint,
+regiao_venda_cliente_controle,cd_marca,,integer,
+regiao_venda_cliente_controle,cd_produto,,bigint,
+regiao_venda_cliente_controle,cd_referencia_externa,,text,
+regiao_venda_cliente_lucas,cd_regiao_venda_cliente,,integer,
+regiao_venda_cliente_lucas,cd_regiao_venda,,integer,
+regiao_venda_cliente_lucas,cd_pessoa,,integer,
+regiao_venda_cliente_lucas,cd_grupo_produto,,integer,
+regiao_venda_cliente_lucas,created_at,,timestamp,Data de criação do registro
+regiao_venda_cliente_lucas,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_cliente_lucas,cd_regiao_venda,X,integer,
+regiao_venda_cliente_lucas,cd_pessoa,X,integer,
+regiao_venda_cliente_lucas,cd_produto,X,integer,
+regiao_venda_cliente_lucas,created_at,,timestamp,Data de criação do registro
+regiao_venda_cliente_lucas,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_cliente_lucas,cd_referencia_externa_carteira,,text,
+regiao_venda_cliente_produto_id_antigo,cd_regiao_venda,,integer,
+regiao_venda_cliente_produto_id_antigo,cd_pessoa,,integer,
+regiao_venda_cliente_produto_id_antigo,cd_produto,,integer,
+regiao_venda_cliente_produto_id_antigo,created_at,,timestamp,Data de criação do registro
+regiao_venda_cliente_produto_id_antigo,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_cliente_produto_id_antigo,cd_referencia_externa_carteira,,text,
+regiao_venda_filial,cd_regiao_venda,X,integer,
+regiao_venda_filial,cd_pessoa_filial,X,integer,
+regiao_venda_filial,id_principal,,smallint,
+regiao_venda_filial,created_at,,timestamp,Data de criação do registro
+regiao_venda_filial,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_grupo_produto,cd_regiao_venda,X,integer,
+regiao_venda_grupo_produto,cd_grupo_produto,X,integer,
+regiao_venda_grupo_produto,created_at,,timestamp,Data de criação do registro
+regiao_venda_grupo_produto,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_hierarquia_completa,cd_regiao_venda_superior,,integer,
+regiao_venda_hierarquia_completa,cd_regiao_venda,,integer,
+regiao_venda_hierarquia_completa,id_menor_hierarquia,,smallint,
+regiao_venda_hierarquia_completa,created_at,,timestamp,Data de criação do registro
+regiao_venda_hierarquia_completa,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_km,cd_regiao_venda,X,integer,
+regiao_venda_km,dt_base,X,date,
+regiao_venda_km,qt_km,,integer,
+regiao_venda_km,dt_geracao,,timestamp,
+regiao_venda_km,cd_pessoa_usuario,,integer,
+regiao_venda_km,created_at,,timestamp,Data de criação do registro
+regiao_venda_km,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_km,qt_minutos,,integer,
+regiao_venda_localizacao,cd_regiao_venda_localizacao,X,bigint,
+regiao_venda_localizacao,cd_regiao_venda,,integer,
+regiao_venda_localizacao,nr_latitude,,text,
+regiao_venda_localizacao,nr_longitude,,text,
+regiao_venda_localizacao,vl_precisao,,"numeric(15,3)",
+regiao_venda_localizacao,pr_bateria,,"numeric(15,3)",
+regiao_venda_localizacao,created_at,,timestamp,Data de criação do registro
+regiao_venda_localizacao,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_marca,cd_regiao_venda,X,integer,
+regiao_venda_marca,cd_marca,X,integer,
+regiao_venda_marca,created_at,,timestamp,Data de criação do registro
+regiao_venda_marca,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_objetivo,cd_regiao_venda,X,integer,
+regiao_venda_objetivo,cd_composicao_objetivo,X,integer,
+regiao_venda_objetivo,dt_mes,X,date,
+regiao_venda_objetivo,vl_objetivo,,"numeric(15,2)",
+regiao_venda_objetivo,vl_resultado,,"numeric(15,2)",
+regiao_venda_objetivo,created_at,,timestamp,Data de criação do registro
+regiao_venda_objetivo,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_pessoa,cd_regiao_venda_pessoa,X,integer,
+regiao_venda_pessoa,cd_regiao_venda,,integer,
+regiao_venda_pessoa,cd_pessoa,,integer,
+regiao_venda_pessoa,dt_inicio,,date,
+regiao_venda_pessoa,dt_fim,,date,
+regiao_venda_pessoa,created_at,,timestamp,Data de criação do registro
+regiao_venda_pessoa,updated_at,,timestamp,Data da última atualização do registro
+regiao_venda_tipo,cd_regiao_venda,X,integer,
+regiao_venda_tipo,cd_tipo_regiao_venda,,integer,
+regiao_venda_tipo,dt_vigencia,,integer,
+regiao_venda_tipo,created_at,,timestamp,Data de criação do registro
+regiao_venda_tipo,updated_at,,timestamp,Data da última atualização do registro
+registro_ponto,cd_registro_ponto,X,integer,
+registro_ponto,cd_pessoa,,integer,
+registro_ponto,dt_referencia,,date,
+registro_ponto,hr_inicio,,time without time zone,
+registro_ponto,hr_termino,,time without time zone,
+registro_ponto,nr_latitude_inicio,,"numeric(8,6)",
+registro_ponto,nr_longitude_inicio,,"numeric(8,6)",
+registro_ponto,nr_latitude_termino,,"numeric(8,6)",
+registro_ponto,nr_longitude_termino,,"numeric(8,6)",
+registro_ponto,id_credito_inicio,,smallint,
+registro_ponto,id_credito_termino,,smallint,
+registro_ponto,id_intervalo,,smallint,
+registro_ponto,created_at,,timestamp,Data de criação do registro
+registro_ponto,updated_at,,timestamp,Data da última atualização do registro
+registro_ponto_ocorrencia,cd_registro_ponto_ocorrencia,X,integer,
+registro_ponto_ocorrencia,dt_referencia,,date,
+registro_ponto_ocorrencia,hr_ponto,,time without time zone,
+registro_ponto_ocorrencia,hr_registro_ocorrencia,,time without time zone,
+registro_ponto_ocorrencia,cd_tipo_ocorrencia_ponto,,integer,
+registro_ponto_ocorrencia,cd_motivo_ocorrencia_ponto,,integer,
+registro_ponto_ocorrencia,ds_observacao,,text,
+registro_ponto_ocorrencia,cd_registro_ponto,,integer,
+registro_ponto_ocorrencia,created_at,,timestamp,Data de criação do registro
+registro_ponto_ocorrencia,updated_at,,timestamp,Data da última atualização do registro
+registro_ponto_ocorrencia,id_entrada_saida,,smallint,
+representante_comercial,cd_pessoa,X,integer,
+representante_comercial,created_at,,timestamp,Data de criação do registro
+representante_comercial,updated_at,,timestamp,Data da última atualização do registro
+requisicao,cd_requisicao,X,integer,
+requisicao,ds_requisicao,,text,
+requisicao,ds_rota,,text,
+requisicao,ds_api,,text,
+requisicao,dt_requisicao,,timestamp,
+requisicao,created_at,,timestamp,Data de criação do registro
+requisicao,updated_at,,timestamp,Data da última atualização do registro
+ressarcimento_conta_corrente,cd_ressarcimento_conta_corrente,X,integer,
+ressarcimento_conta_corrente,cd_fornecedor_ressarcimento,,integer,
+ressarcimento_conta_corrente,dt_base,,date,
+ressarcimento_conta_corrente,cd_historico_ressarcimento,,integer,
+ressarcimento_conta_corrente,ds_lancamento,,text,
+ressarcimento_conta_corrente,dt_lancamento,,date,
+ressarcimento_conta_corrente,vl_lancamento,,"numeric(15,2)",
+ressarcimento_conta_corrente,ds_complemento,,text,
+ressarcimento_conta_corrente,cd_pessoa_usuario,,integer,
+ressarcimento_conta_corrente,ds_observacao,,text,
+ressarcimento_conta_corrente,ds_arquivo,,text,
+ressarcimento_conta_corrente,created_at,,timestamp,Data de criação do registro
+ressarcimento_conta_corrente,updated_at,,timestamp,Data da última atualização do registro
+ressarcimento_conta_corrente_fechamento,cd_fornecedor_ressarcimento,X,integer,
+ressarcimento_conta_corrente_fechamento,dt_base,X,date,
+ressarcimento_conta_corrente_fechamento,vl_fechamento,,"numeric(15,2)",
+ressarcimento_conta_corrente_fechamento,dt_fechamento,,date,
+ressarcimento_conta_corrente_fechamento,cd_pessoa_usuario,,integer,
+ressarcimento_conta_corrente_fechamento,created_at,,timestamp,Data de criação do registro
+ressarcimento_conta_corrente_fechamento,updated_at,,timestamp,Data da última atualização do registro
+ressarcimento_conta_corrente_lancamento,cd_ressarcimento_conta_corrente_lancamento,X,integer,
+ressarcimento_conta_corrente_lancamento,cd_ressarcimento_coonta_corrente,,integer,
+ressarcimento_conta_corrente_lancamento,cd_nota_fiscal,,integer,
+ressarcimento_conta_corrente_lancamento,cd_negociacao,,integer,
+ressarcimento_conta_corrente_lancamento,cd_concurso,,integer,
+ressarcimento_conta_corrente_lancamento,cd_acordo_comercial,,integer,
+ressarcimento_conta_corrente_lancamento,vl_lancamento,,"numeric(15,2)",
+ressarcimento_conta_corrente_lancamento,vl_gerado,,"numeric(15,2)",
+ressarcimento_conta_corrente_lancamento,vl_base,,"numeric(15,2)",
+ressarcimento_conta_corrente_lancamento,created_at,,timestamp,Data de criação do registro
+ressarcimento_conta_corrente_lancamento,updated_at,,timestamp,Data da última atualização do registro
+restricao_venda,cd_restricao_venda,X,integer,
+restricao_venda,cd_produto,,bigint,
+restricao_venda,cd_grupo_produto,,integer,
+restricao_venda,cd_marca,,integer,
+restricao_venda,cd_regiao_venda,,integer,
+restricao_venda,cd_atividade,,integer,
+restricao_venda,cd_pessoa_cliente,,integer,
+restricao_venda,created_at,,timestamp,Data de criação do registro
+restricao_venda,updated_at,,timestamp,Data da última atualização do registro
+restricao_venda,cd_referencia_externa,,text,
