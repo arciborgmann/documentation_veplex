@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const menu = document.querySelector('nav > ul'); // Seleciona o menu principal
     const toggleButton = document.querySelector('.menu-toggle'); // Botão do menu hambúrguer
-    const menuItems = document.querySelectorAll('nav li[data-content]'); // Itens do menu
+    const menuItems = document.querySelectorAll('nav li[data-content], a[data-content]'); // Itens do menu e links dinâmicos
     const mainContent = document.getElementById('content'); // Área de conteúdo dinâmico
 
     // Função para ordenar itens do menu e submenus
@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Ordena o menu principal
     if (menu) {
         ordenarMenu(menu);
-        console.log('Itens do menu e submenus ordenados.');
     }
 
     // Função para alternar a visibilidade do menu hambúrguer
@@ -45,28 +44,30 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Função para carregar conteúdo dinâmico
     menuItems.forEach(item => {
-        item.addEventListener('click', function () {
+        item.addEventListener('click', function (event) {
+            event.preventDefault();
+            console.log('Link clicado:', item);
             const contentName = item.getAttribute('data-content');
-
-            // Limpa o conteúdo anterior e exibe um indicador de carregamento
-            mainContent.innerHTML = 'Carregando...';
-
-            // Carrega o conteúdo do arquivo HTML correspondente
-            if (contentName) {
-                fetch(`pages/${contentName}.html`)
-                    .then(response => {
-                        if (!response.ok) {
-                            throw new Error(`Falha ao carregar ${contentName}.html: ${response.statusText}`);
-                        }
-                        return response.text();
-                    })
-                    .then(data => {
-                        mainContent.innerHTML = data;
-                    })
-                    .catch(error => {
-                        mainContent.innerHTML = `Erro ao carregar o conteúdo: ${error.message}`;
-                    });
-            }
+            console.log('Conteúdo:', contentName);
+    
+            mainContent.innerHTML = 'Carregando...'; // Indicação visual de carregamento
+    
+            fetch(`pages/${contentName}.html`)
+                .then(response => {
+                    console.log('Status da resposta:', response.status);
+                    if (!response.ok) {
+                        throw new Error(`Falha ao carregar ${contentName}.html: ${response.statusText}`);
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    console.log('Dados carregados:', data);
+                    mainContent.innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Erro ao carregar conteúdo:', error);
+                    mainContent.innerHTML = `<p>Erro ao carregar o conteúdo: ${error.message}</p>`;
+                });
         });
-    });
+    });    
 });

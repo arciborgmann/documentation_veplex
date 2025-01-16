@@ -54,6 +54,7 @@ class CSVController extends Controller
     {
         try {
             $tabelaNome = $record['Tabela']; // Nome da tabela
+            //$descricaoTabela = $record['DescriçãoTabela']; //Descrição da Tabela
             $campoNome = $record['Campo']; // Nome do campo
             $campoTipo = $record['Tipo']; // Tipo do campo
             $descricao = $record['Descrição']; // Descrição do campo
@@ -67,7 +68,7 @@ class CSVController extends Controller
                 // Cria ou encontra a tabela no banco de dados
                 $tabela = Tabela::firstOrCreate(
                     ['nome' => $tabelaNome], // Condição de busca
-                    ['descricao' => 'Descrição da tabela'] // Descrição padrão ou informada
+                    ['descricao' => 'Descrição da Tabela'] //$descricaoTabela
                 );
 
                 // Log para verificar se a tabela foi criada ou encontrada

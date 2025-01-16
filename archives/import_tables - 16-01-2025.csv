@@ -1,0 +1,246 @@
+Tabela,Campo,PK,Tipo,Descrição
+tmp_regiao_venda_cliente_produto,cd_regiao_venda_cliente_produto,,integer,
+tmp_regiao_venda_cliente_produto,cd_regiao_venda,,integer,
+tmp_regiao_venda_cliente_produto,cd_pessoa,,integer,
+tmp_regiao_venda_cliente_produto,cd_produto,,integer,
+tmp_regiao_venda_cliente_produto,created_at,,timestamp,Data de criação do registro
+tmp_regiao_venda_cliente_produto,updated_at,,timestamp,Data da última atualização do registro
+tmp_regiao_venda_cliente_produto,cd_referencia_externa_carteira,,text,
+tmp_regiao_venda_id_nulo,cd_regiao_venda_cliente,,integer,
+tmp_regiao_venda_id_nulo,cd_regiao_venda,,integer,
+tmp_regiao_venda_id_nulo,cd_pessoa,,integer,
+tmp_regiao_venda_id_nulo,cd_grupo_produto,,integer,
+tmp_regiao_venda_id_nulo,created_at,,timestamp,Data de criação do registro
+tmp_regiao_venda_id_nulo,updated_at,,timestamp,Data da última atualização do registro
+tmp_regiao_venda_id_nulo,cd_fabricante,,bigint,
+tmp_regiao_venda_id_nulo,cd_marca,,integer,
+tmp_regiao_venda_id_nulo,cd_produto,,bigint,
+tmp_regiao_venda_id_nulo,cd_referencia_externa_carteira,,text,
+tmp_restricao_venda_tiscoski,nr_cnpj,,bigint,
+tmp_restricao_venda_tiscoski,cd_referencia_externa_grupo_produto,,varchar (50),
+tmp_restricao_venda_tiscoski,cd_referencia_externa_produto,,varchar (50),
+tmp_titulos,cd_titulo,,bigint,
+tmp_titulos,cd_pessoa_filial,,integer,
+tmp_titulos_total,cd_portador,,bigint,
+tmp_titulos_total,vl_titulo,,bigint,
+tmp_titulos_total,vl_acrescimo,,integer,
+tmp_titulos_total,vl_desconto,,"numeric(15,2)",
+tmp_titulos_total,vl_multa,,"numeric(15,2)",
+tmp_titulos_total,vl_juro,,"numeric(15,2)",
+tmp_titulos_total,vl_emolumento,,"numeric(15,2)",
+tmp_titulos_total,vl_pago,,"numeric(15,2)",
+tmp_titulos_total,dt_vencimento,,date,
+tmp_titulos_total,dt_quitacao,,date,
+tmp_titulos_total,dt_baixa,,date,
+tmp_titulos_total,ds_observacao,,text,
+tmp_titulos_total,nr_banco,,text,
+tmp_titulos_total,nr_parcela,,smallint,
+tmp_titulos_total,dt_remessa_banco,,date,
+tmp_titulos_total,nr_documento,,text,
+tmp_titulos_total,id_registrado_banco,,smallint,
+tmp_titulos_total,ds_codigo_barras,,text,
+tmp_titulos_total,created_at,,timestamp,Data de criação do registro
+tmp_titulos_total,updated_at,,timestamp,Data da última atualização do registro
+tmp_titulos_total,cd_regiao_venda,,integer,
+tmp_titulos_total,cd_pedido,,bigint,
+tmp_titulos_total,cd_pessoa_filial,,integer,
+tmp_titulos_total,id_bloqueia_venda,,smallint,
+transportadora,cd_pessoa,,integer,
+transportadora,nr_antt,,bigint,
+transportadora,dt_validade_antt,,date,
+transportadora,id_xml,,smallint,
+transportadora,ds_observacao,,text,
+transportadora,dt_validade_alvara,,date,
+transportadora,vl_iss,,"numeric(15,2)",
+transportadora,created_at,,timestamp,Data de criação do registro
+transportadora,updated_at,,timestamp,Data da última atualização do registro
+uf,cd_uf,X,integer,
+uf,cd_pais,,integer,
+uf,nm_uf,,text,
+uf,ds_sigla,,varchar (2),
+uf,nr_ibge,,smallint,
+uf,created_at,,timestamp,Data de criação do registro
+uf,updated_at,,timestamp,Data da última atualização do registro
+unidade_medida,cd_unidade_medida,X,integer,
+unidade_medida,nm_unidade_medida,,text,
+unidade_medida,ds_sigla,,text,
+unidade_medida,created_at,,timestamp,Data de criação do registro
+unidade_medida,updated_at,,timestamp,Data da última atualização do registro
+unidade_operacional,cd_unidade_operacional,X,integer,
+unidade_operacional,nm_unidade_operacional,,text,
+unidade_operacional,created_at,,timestamp,Data de criação do registro
+unidade_operacional,updated_at,,timestamp,Data da última atualização do registro
+unidade_operacional_centro_custo,cd_unidade_operacional,X,integer,
+unidade_operacional_centro_custo,cd_centro_custo,X,integer,
+unidade_operacional_centro_custo,created_at,,timestamp,Data de criação do registro
+unidade_operacional_centro_custo,updated_at,,timestamp,Data da última atualização do registro
+users,id,X,bigint,
+users,name,,varchar (255),
+users,email,,varchar (255),
+users,email_verified_at,,timestamp,
+users,password,,varchar (255),
+users,base_conectada,,text,
+users,remember_token,,varchar (100),
+users,created_at,,timestamp,Data de criação do registro
+users,updated_at,,timestamp,Data da última atualização do registro
+users_permissao,cd_users_permissao,X,integer,
+users_permissao,cd_users,,integer,
+users_permissao,nm_rota,,text,
+users_permissao,created_at,,timestamp,Data de criação do registro
+users_permissao,updated_at,,timestamp,Data da última atualização do registro
+usuario,cd_pessoa,X,integer,
+usuario,email,,text,
+usuario,password,,text,
+usuario,active,,smallint,
+usuario,email_verified_at,,timestamp,
+usuario,root,,smallint,
+usuario,ds_token_fcm,,text,
+usuario,base_conectada,,text,
+usuario,remember_token,,varchar (100),
+usuario,created_at,,timestamp,Data de criação do registro
+usuario,updated_at,,timestamp,Data da última atualização do registro
+usuario,id_darkmode,,smallint,
+usuario,id_solicita_alteracao_senha,,smallint,
+usuario,ds_confirmacao,,text,
+usuario_base_dados,cd_pessoa,,integer,
+usuario_base_dados,cd_base_dados,,integer,
+usuario_base_dados,created_at,,timestamp,Data de criação do registro
+usuario_base_dados,updated_at,,timestamp,Data da última atualização do registro
+usuario_filial,cd_pessoa_usuario,,integer,
+usuario_filial,cd_pessoa_filial,,integer,
+usuario_filial,created_at,,timestamp,Data de criação do registro
+usuario_filial,updated_at,,timestamp,Data da última atualização do registro
+usuario_grupo_permissao,cd_pessoa_usuario,X,integer,
+usuario_grupo_permissao,cd_grupo_permissao,X,integer,
+usuario_grupo_permissao,created_at,,timestamp,Data de criação do registro
+usuario_grupo_permissao,updated_at,,timestamp,Data da última atualização do registro
+usuario_log,cd_usuario,X,bigint,
+usuario_log,nm_usuario,,text,
+usuario_log,ds_email,,text,
+usuario_log,nr_cpf,,varchar (11),
+usuario_log,created_at,,timestamp,Data de criação do registro
+usuario_log,updated_at,,timestamp,Data da última atualização do registro
+usuario_permissao,cd_pessoa_usuario,X,integer,
+usuario_permissao,cd_permissao,X,integer,
+usuario_permissao,id_leitura,,smallint,
+usuario_permissao,id_escrita,,smallint,
+usuario_permissao,created_at,,timestamp,Data de criação do registro
+usuario_permissao,updated_at,,timestamp,Data da última atualização do registro
+usuario_permissao,id_favorito,,smallint,
+veiculo,cd_veiculo,X,integer,
+veiculo,cd_pessoa_proprietario,,integer,
+veiculo,cd_tipo_veiculo,,integer,
+veiculo,cd_uf_licenciamento,,integer,
+veiculo,nr_chassi,,character (20),
+veiculo,ds_veiculo,,text,
+veiculo,nr_ano,,smallint,
+veiculo,id_ativo,,smallint,
+veiculo,ds_placa,,character (7),
+veiculo,nr_frota,,integer,
+veiculo,created_at,,timestamp,Data de criação do registro
+veiculo,updated_at,,timestamp,Data da última atualização do registro
+veiculo_motorista,cd_veiculo_motorista,X,integer,
+veiculo_motorista,cd_veiculo,,integer,
+veiculo_motorista,cd_pessoa,,integer,
+veiculo_motorista,dt_inicio,,date,
+veiculo_motorista,dt_termino,,date,
+veiculo_motorista,created_at,,timestamp,Data de criação do registro
+veiculo_motorista,updated_at,,timestamp,Data da última atualização do registro
+vendedor_base_disponivel,cd_vendedor_base_disponivel,X,integer,
+vendedor_base_disponivel,nr_documento,,text,
+vendedor_base_disponivel,cd_regiao_venda,,integer,
+vendedor_base_disponivel,cd_base_dados,,integer,
+vendedor_base_disponivel,created_at,,timestamp,Data de criação do registro
+vendedor_base_disponivel,updated_at,,timestamp,Data da última atualização do registro
+verba_investimento_extrato,cd_verba_investimento_extrato,X,integer,
+verba_investimento_extrato,cd_regiao_venda,,integer,
+verba_investimento_extrato,cd_marca,,integer,
+verba_investimento_extrato,dt_movimentacao,,date,
+verba_investimento_extrato,dt_mes,,date,
+verba_investimento_extrato,vl_entrada,,"numeric(15,2)",
+verba_investimento_extrato,vl_saida,,"numeric(15,2)",
+verba_investimento_extrato,ds_movimentacao,,text,
+verba_investimento_extrato,nr_pedido,,text,
+verba_investimento_extrato,id_tipo,,smallint,
+verba_investimento_extrato,created_at,,timestamp,Data de criação do registro
+verba_investimento_extrato,updated_at,,timestamp,Data da última atualização do registro
+verba_investimento_lancamento,cd_lancamento,X,integer,
+verba_investimento_lancamento,cd_regiao_venda,,integer,
+verba_investimento_lancamento,dt_lancamento,,date,
+verba_investimento_lancamento,vl_lancamento,,"numeric(15,2)",
+verba_investimento_lancamento,id_tipo,,smallint,
+verba_investimento_lancamento,cd_marca,,integer,
+verba_investimento_lancamento,cd_pessoa_usuario,,integer,
+verba_investimento_lancamento,ds_motivo,,text,
+verba_investimento_lancamento,id_transferencia,,smallint,
+verba_investimento_lancamento,created_at,,timestamp,Data de criação do registro
+verba_investimento_lancamento,updated_at,,timestamp,Data da última atualização do registro
+verba_investimento_participacao,cd_produto,X,integer,
+verba_investimento_participacao,cd_pessoa_filial,,integer,
+verba_investimento_participacao,dt_vigencia,,date,
+verba_investimento_participacao,id_tipo,,"numeric(15,2)",
+verba_investimento_participacao,pr_gerente,,smallint,
+verba_investimento_participacao,pr_supervisor,,integer,
+verba_investimento_participacao,pr_vendedor,,integer,
+verba_investimento_participacao,created_at,,timestamp,Data de criação do registro
+verba_investimento_participacao,updated_at,,timestamp,Data da última atualização do registro
+verba_investimento_saldo,cd_verba_investimento_saldo,X,integer,
+verba_investimento_saldo,cd_regiao_venda,,integer,
+verba_investimento_saldo,cd_marca,,integer,
+verba_investimento_saldo,dt_mes,,date,
+verba_investimento_saldo,vl_saldo,,"numeric(15,2)",
+verba_investimento_saldo,id_tipo,,smallint,
+verba_investimento_saldo,created_at,,timestamp,Data de criação do registro
+verba_investimento_saldo,updated_at,,timestamp,Data da última atualização do registro
+verba_investimento_saldo,vl_entradas,,"numeric(15,2)",
+verba_investimento_saldo,vl_saidas,,"numeric(15,2)",
+verba_investimento_saldo,cd_referencia_externa,,text,
+verba_investimento_saldo,cd_pessoa_cliente,,integer,
+verba_investimento_transferencia,cd_lancamento,X,integer,
+verba_investimento_transferencia,cd_regiao_venda,,integer,
+verba_investimento_transferencia,cd_pessoa_usuario,,integer,
+verba_investimento_transferencia,created_at,,timestamp,Data de criação do registro
+verba_investimento_transferencia,updated_at,,timestamp,Data da última atualização do registro
+verba_investimento_saldo,cd_versao_aplicativo,X,integer,
+verba_investimento_saldo,id_aplicativo,,smallint,
+verba_investimento_saldo,ds_versao,,text,
+verba_investimento_saldo,ds_url_apk,,text,
+verba_investimento_saldo,nm_apk,,text,
+verba_investimento_saldo,dt_lancamento_versao,,date,
+verba_investimento_saldo,dt_bloqueio_versao,,date,
+verba_investimento_saldo,created_at,,timestamp,Data de criação do registro
+verba_investimento_saldo,updated_at,,timestamp,Data da última atualização do registro
+visita_cliente,cd_visita_cliente,X,integer,
+visita_cliente,cd_motivo_visita,,integer,
+visita_cliente,cd_regiao_venda,,integer,
+visita_cliente,cd_pessoa_cliente,,integer,
+visita_cliente,dt_inicio,,timestamp,
+visita_cliente,dt_termino,,timestamp,
+visita_cliente,nr_latitude_inicio,,"numeric(8,6)",
+visita_cliente,nr_latitude_termino,,"numeric(8,6)",
+visita_cliente,nr_longitude_inicio,,"numeric(8,6)",
+visita_cliente,nr_longitude_termino,,"numeric(8,6)",
+visita_cliente,id_presencial,,smallint,
+visita_cliente,id_credito,,smallint,
+visita_cliente,cd_visita_programada,,integer,
+visita_cliente,ds_observacao,,text,
+visita_cliente,nr_pedido,,text,
+visita_cliente,nr_visita,,text,
+visita_cliente,created_at,,timestamp,Data de criação do registro
+visita_cliente,updated_at,,timestamp,Data da última atualização do registro
+visita_cliente,id_credito_termino,,smallint,
+visita_cliente,id_presencial_termino,,smallint,
+visita_cliente,ds_observacao_integracao,,text,
+visita_cliente,dt_exportado,,timestamp,
+visita_programada,cd_visita_programada,X,integer,
+visita_programada,cd_regiao_venda,,integer,
+visita_programada,cd_pessoa_cliente,,integer,
+visita_programada,dt_visita,,date,
+visita_programada,hr_visita_inicio,,timestamp,
+visita_programada,hr_visita_termino,,timestamp,
+visita_programada,id_status,,smallint,
+visita_programada,cd_visita_programada_origem,,integer,
+visita_programada,cd_plano_visita,,integer,
+visita_programada,created_at,,timestamp,Data de criação do registro
+visita_programada,updated_at,,timestamp,Data da última atualização do registro
+visita_programada,cd_referencia_externa,,text,
